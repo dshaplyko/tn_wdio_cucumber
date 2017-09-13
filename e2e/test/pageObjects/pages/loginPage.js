@@ -1,6 +1,5 @@
 "use strict";
 var Page = require('./page')
-var homePage = require('./homePage')
 
 class LoginPage extends Page {
     get email()         { return browser.element("input[name='email']"); }
@@ -12,11 +11,11 @@ class LoginPage extends Page {
     }
     
     enterEmail() {
-        return this.email.setValue('asdasd');
+        return this.email.setValue('test@test.ru');
     }
 
     enterPassword() {
-        return this.password.setValue('asdasdasd');
+        return this.password.setValue('password');
     }
 
     login() {

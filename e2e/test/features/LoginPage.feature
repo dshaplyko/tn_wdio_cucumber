@@ -1,5 +1,6 @@
 Feature: Login Feature
 
-Scenario: Checking elements on login page
+Scenario: Logging to the application
   Given I am on login page
-  When I enter credentials 
+  When I enter credentials
+  Then I should be on main page
