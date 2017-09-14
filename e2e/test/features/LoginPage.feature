@@ -1,6 +1,7 @@
 Feature: Login Feature
 As a user I want to be able to login using valud credentials
 
+@main
 Scenario: Logging to the application
   Given I am on login page
   When I enter credentials
