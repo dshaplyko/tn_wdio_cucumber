@@ -9,11 +9,11 @@
     "e2e": "node_modules/.bin/wdio ./wdio.conf.js",
     "e2e-full": "npm run clean-report & npm run e2e & npm run generate-report & npm run open-report"
   },
-  
+
   "devDependencies": {
     "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
     "cucumber": "3.0.1",
-    "jasmine": "^2.8.0",
     "wdio-allure-reporter": "0.1.2",
     "wdio-mocha-framework": "0.5.8",
     "wdio-screenshot": "0.5.2",

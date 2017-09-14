@@ -3,9 +3,12 @@ const MainPage = require('../../pageObjects/pages/mainPage');
 const main = new MainPage();
 
 defineSupportCode((cucumber) => {
+    cucumber.When(/^I wait until main page is loaded$/, () => {
+        return main.waitUntilNotesAreVisible();
+    });
+
     cucumber.Then(/^I should be on main page$/, () => {
-        browser.pause(5000);
-        return expect(main.notesShouldBeVisible()).to.be.true;
+        return expect(main.toggleAppears()).to.be.true;
     });
 });
 
