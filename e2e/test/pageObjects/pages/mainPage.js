@@ -12,7 +12,7 @@ class MainPage extends Page {
     waitUntilNotesAreVisible() {
         browser.waitUntil(() => {
             return this.notes.isVisible() === true
-          }, global.GLOBAL_TIMEOUT, 'expected notes to be visible');
+          }, GLOBAL_TIMEOUT, 'expected notes to be visible');
     }
     
     toggleAppears() {

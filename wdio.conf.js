@@ -1,4 +1,4 @@
-const GLOBAL_TIMEOUT = 20e3;
+const GLOBAL_TIMEOUT = 30e3;
 
 exports.config = {
     maxInstances: 1,
@@ -10,23 +10,23 @@ exports.config = {
     ],
     sync: true,
     coloredLogs: true,
-    //screenshotPath: './tests/e2e/.reports/screenshots',
+    screenshotPath: './e2e/test/support/screenshots',
     baseUrl: 'http://iwasthere.herokuapp.com/#',
-    //waitforTimeout: GLOBAL_TIMEOUT,
     framework: 'cucumber',
     cucumberOpts: {
         require: [
-            './e2e/test/common/step_definitions/login',
-            './e2e/test/common/step_definitions/main',
-            './e2e/test/common/step_definitions/common',
-            './e2e/test/common/support/env',
+            './e2e/test/common/support/index',
             './e2e/test/common/support/hooks.js'
         ],
         format: ['pretty', 'json:cucumber.json'],
-        colors: true
+        colors: true,
+        timeout: GLOBAL_TIMEOUT
+
+        /*Use the parameter to run a test
+        tagExpression: '@test' */
     },
-    logLevel: 'silent',
-    reporters: ['spec', 'dot'],
+    //logLevel: 'silent',
+    reporters: ['cucumber'],
     // reporterOptions: {
     //     allure: {
     //         outputDir: './tests/e2e/.reports/allure/xml'
