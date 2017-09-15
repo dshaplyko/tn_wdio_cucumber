@@ -2,8 +2,8 @@
 var Page = require('./page')
 
 class MainPage extends Page {
-    get notes()  { return browser.element(".notes-grid"); }
-    get toggle() { return browser.element('#onlyMyButton'); }
+    get notes()     { return browser.element(".notes-grid"); }
+    get toggle()    { return browser.element('#onlyMyButton'); }
     
     open() {
         super.open('main');

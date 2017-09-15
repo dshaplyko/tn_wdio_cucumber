@@ -12,5 +12,19 @@ defineSupportCode((cucumber) => {
         return login.login();
     });
 
-});
+    cucumber.When(/^I enter "([^"]+)" in username field$/, (value) => {
+        return login.enterEmail(value);
+    });
 
+    cucumber.When(/^I enter "([^"]+)" in password field$/, (value) => {
+        return login.enterPassword(value);
+    });
+
+    cucumber.When(/^I click login button$/, () => {
+        return login.clickLogin();
+    });
+
+    cucumber.When(/^I click register link$/, () => {
+        return login.clickRegisterButton();
+    });
+});

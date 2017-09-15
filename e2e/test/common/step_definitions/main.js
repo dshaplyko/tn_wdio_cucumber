@@ -10,5 +10,7 @@ defineSupportCode((cucumber) => {
     cucumber.Then(/^I should be on main page$/, () => {
         return expect(main.toggleAppears()).to.be.true;
     });
+
+    
 });
 

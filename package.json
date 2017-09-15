@@ -6,7 +6,7 @@
   "scripts": {
     "selenium-server": "node node_modules/selenium-standalone/bin/selenium-standalone start",
     "e2e-setup": "node node_modules/selenium-standalone/bin/selenium-standalone install",
-    "e2e": "wdio ./wdio.conf.js",
+    "e2e": "./node_modules/.bin/wdio ./wdio.conf.js",
     "e2e-full": "npm run clean-report & npm run e2e & npm run generate-report & npm run open-report"
   },
   "devDependencies": {
