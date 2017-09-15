@@ -1,0 +1,86 @@
+{
+  "summary" : {
+    "reportName" : "Allure Report",
+    "testRuns" : [ ],
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 16,
+      "unknown" : 0,
+      "total" : 16
+    },
+    "time" : {
+      "start" : 1505468264466,
+      "stop" : 1505468297647,
+      "duration" : 33181,
+      "minDuration" : 3,
+      "maxDuration" : 14121,
+      "sumDuration" : 32859
+    }
+  },
+  "environment" : [ {
+    "values" : [ "{\"browserName\":\"chrome\"}" ],
+    "name" : "capabilities"
+  }, {
+    "values" : [ "[\"/Users/mac/Projects/ta_wdio_cucumber/tn_wdio_cucumber/e2e/test/features/LoginPage.feature\"]" ],
+    "name" : "spec files"
+  } ],
+  "suites" : {
+    "total" : 3,
+    "items" : [ {
+      "uid" : "1cf7c37e72bfe722cd5e0eacc399edb9",
+      "name" : "Login Feature Logging in with incorrect password",
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 8
+      }
+    }, {
+      "uid" : "700e79a59808971643584728dd956187",
+      "name" : "Login Feature Logging to the application",
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      }
+    }, {
+      "uid" : "92a1b1fc804a99e87b81e7fdb169ad94",
+      "name" : "Login Feature Clicking on Register link",
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      }
+    } ]
+  },
+  "history-trend" : [ {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 16,
+      "unknown" : 0,
+      "total" : 16
+    }
+  } ],
+  "behaviors" : {
+    "total" : 16,
+    "items" : [ ]
+  },
+  "executors" : [ ],
+  "categories" : {
+    "total" : 0,
+    "items" : [ ]
+  },
+  "launches" : [ ]
+}

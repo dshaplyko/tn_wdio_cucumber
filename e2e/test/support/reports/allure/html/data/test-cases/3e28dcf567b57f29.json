@@ -1,0 +1,110 @@
+{
+  "uid" : "3e28dcf567b57f29",
+  "name" : "I wait until registration page is loaded",
+  "fullName" : "Login Feature Clicking on Register link.I wait until registration page is loaded",
+  "historyId" : "92a0df77b5ba58ca24fc0f6cb145c262",
+  "time" : {
+    "start" : 1505468297494,
+    "stop" : 1505468297601,
+    "duration" : 107
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/453a81408b06bc6a1000c7d09088f7f3/element",
+      "time" : {
+        "start" : 1505468297498,
+        "stop" : 1505468297555,
+        "duration" : 57
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e1fa93af7a8115d0",
+        "name" : "Request",
+        "source" : "e1fa93af7a8115d0.json",
+        "type" : "application/json",
+        "size" : 59
+      }, {
+        "uid" : "79a1b40db4245b50",
+        "name" : "Response",
+        "source" : "79a1b40db4245b50.json",
+        "type" : "application/json",
+        "size" : 138
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /wd/hub/session/453a81408b06bc6a1000c7d09088f7f3/element/0.06252985161233005-13/displayed",
+      "time" : {
+        "start" : 1505468297562,
+        "stop" : 1505468297591,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "3ccb546d399115",
+        "name" : "Response",
+        "source" : "3ccb546d399115.json",
+        "type" : "application/json",
+        "size" : 91
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login Feature Clicking on Register link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login Feature Clicking on Register link"
+  }, {
+    "name" : "testMethod",
+    "value" : "I wait until registration page is loaded"
+  }, {
+    "name" : "package",
+    "value" : "Login Feature Clicking on Register link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "source" : "3e28dcf567b57f29.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,89 @@
+{
+  "uid" : "9dc94d6dbbe80df3",
+  "name" : "I am on login page",
+  "fullName" : "Login Feature Logging in with incorrect password.I am on login page",
+  "historyId" : "6c3847394e5cdbf8a036780fc0a85cb5",
+  "time" : {
+    "start" : 1505468284965,
+    "stop" : 1505468285000,
+    "duration" : 35
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/453a81408b06bc6a1000c7d09088f7f3/url",
+      "time" : {
+        "start" : 1505468284965,
+        "stop" : 1505468284990,
+        "duration" : 25
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e904a85a98e3747b",
+        "name" : "Request",
+        "source" : "e904a85a98e3747b.json",
+        "type" : "application/json",
+        "size" : 54
+      }, {
+        "uid" : "cdd86cced3644243",
+        "name" : "Response",
+        "source" : "cdd86cced3644243.json",
+        "type" : "application/json",
+        "size" : 91
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "testClass",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "testMethod",
+    "value" : "I am on login page"
+  }, {
+    "name" : "package",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "source" : "9dc94d6dbbe80df3.json",
+  "parameterValues" : [ ]
+}

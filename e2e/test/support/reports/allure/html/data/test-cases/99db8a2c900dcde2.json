@@ -1,0 +1,137 @@
+{
+  "uid" : "99db8a2c900dcde2",
+  "name" : "I enter \"12345\" in password field",
+  "fullName" : "Login Feature Logging in with incorrect password.I enter \"12345\" in password field",
+  "historyId" : "89bf2640b2563a7c4738ae796a455fa9",
+  "time" : {
+    "start" : 1505468285587,
+    "stop" : 1505468285828,
+    "duration" : 241
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/453a81408b06bc6a1000c7d09088f7f3/element",
+      "time" : {
+        "start" : 1505468285591,
+        "stop" : 1505468285608,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e4840c8029dc8290",
+        "name" : "Request",
+        "source" : "e4840c8029dc8290.json",
+        "type" : "application/json",
+        "size" : 70
+      }, {
+        "uid" : "5f51a3628a1e81b",
+        "name" : "Response",
+        "source" : "5f51a3628a1e81b.json",
+        "type" : "application/json",
+        "size" : 137
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /wd/hub/session/453a81408b06bc6a1000c7d09088f7f3/element/0.06252985161233005-7/clear",
+      "time" : {
+        "start" : 1505468285622,
+        "stop" : 1505468285672,
+        "duration" : 50
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "c4df20f7a938ac82",
+        "name" : "Response",
+        "source" : "c4df20f7a938ac82.json",
+        "type" : "application/json",
+        "size" : 91
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /wd/hub/session/453a81408b06bc6a1000c7d09088f7f3/element/0.06252985161233005-7/value",
+      "time" : {
+        "start" : 1505468285672,
+        "stop" : 1505468285819,
+        "duration" : 147
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "59ae4895b1f68734",
+        "name" : "Request",
+        "source" : "59ae4895b1f68734.json",
+        "type" : "application/json",
+        "size" : 109
+      }, {
+        "uid" : "f50ff70a0803ebf9",
+        "name" : "Response",
+        "source" : "f50ff70a0803ebf9.json",
+        "type" : "application/json",
+        "size" : 91
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 5,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "testClass",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "testMethod",
+    "value" : "I enter \"12345\" in password field"
+  }, {
+    "name" : "package",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "source" : "99db8a2c900dcde2.json",
+  "parameterValues" : [ ]
+}

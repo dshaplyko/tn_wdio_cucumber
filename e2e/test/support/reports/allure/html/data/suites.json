@@ -1,0 +1,209 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Login Feature Logging to the application",
+    "children" : [ {
+      "name" : "I am on login page",
+      "uid" : "b3a1778e64d1a06a",
+      "parentUid" : "700e79a59808971643584728dd956187",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468264466,
+        "stop" : 1505468278587,
+        "duration" : 14121
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I enter credentials",
+      "uid" : "e501a4bcf9e138d2",
+      "parentUid" : "700e79a59808971643584728dd956187",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468278630,
+        "stop" : 1505468284217,
+        "duration" : 5587
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I wait until main page is loaded",
+      "uid" : "87f6e37aa0a410f3",
+      "parentUid" : "700e79a59808971643584728dd956187",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468284219,
+        "stop" : 1505468284804,
+        "duration" : 585
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I should be on main page",
+      "uid" : "a77a8c741c4e281d",
+      "parentUid" : "700e79a59808971643584728dd956187",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468284810,
+        "stop" : 1505468284865,
+        "duration" : 55
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "700e79a59808971643584728dd956187"
+  }, {
+    "name" : "Login Feature Logging in with incorrect password",
+    "children" : [ {
+      "name" : "I am on login page",
+      "uid" : "9dc94d6dbbe80df3",
+      "parentUid" : "1cf7c37e72bfe722cd5e0eacc399edb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468284965,
+        "stop" : 1505468285000,
+        "duration" : 35
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I enter \"test@test.ru\" in username field",
+      "uid" : "315c1a3fb9118c23",
+      "parentUid" : "1cf7c37e72bfe722cd5e0eacc399edb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468285004,
+        "stop" : 1505468285583,
+        "duration" : 579
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I enter \"12345\" in password field",
+      "uid" : "99db8a2c900dcde2",
+      "parentUid" : "1cf7c37e72bfe722cd5e0eacc399edb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468285587,
+        "stop" : 1505468285828,
+        "duration" : 241
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I click login button",
+      "uid" : "92cb0c99da02e726",
+      "parentUid" : "1cf7c37e72bfe722cd5e0eacc399edb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468285830,
+        "stop" : 1505468291007,
+        "duration" : 5177
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I wait until modal appears",
+      "uid" : "4f72525bf76fcc90",
+      "parentUid" : "1cf7c37e72bfe722cd5e0eacc399edb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468291010,
+        "stop" : 1505468291594,
+        "duration" : 584
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Error message should be displayed",
+      "uid" : "dacd4bac95600c23",
+      "parentUid" : "1cf7c37e72bfe722cd5e0eacc399edb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468291594,
+        "stop" : 1505468291668,
+        "duration" : 74
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Text of error message should be \"Incorrect username or password.\"",
+      "uid" : "680ea39b93e003c0",
+      "parentUid" : "1cf7c37e72bfe722cd5e0eacc399edb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468291672,
+        "stop" : 1505468291740,
+        "duration" : 68
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I click OK button in modal",
+      "uid" : "ff883eb69287daf6",
+      "parentUid" : "1cf7c37e72bfe722cd5e0eacc399edb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468291742,
+        "stop" : 1505468297205,
+        "duration" : 5463
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1cf7c37e72bfe722cd5e0eacc399edb9"
+  }, {
+    "name" : "Login Feature Clicking on Register link",
+    "children" : [ {
+      "name" : "I am on login page",
+      "uid" : "739cb7056bf45fa",
+      "parentUid" : "92a1b1fc804a99e87b81e7fdb169ad94",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468297344,
+        "stop" : 1505468297347,
+        "duration" : 3
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I click register link",
+      "uid" : "b01a5e426ba14975",
+      "parentUid" : "92a1b1fc804a99e87b81e7fdb169ad94",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468297347,
+        "stop" : 1505468297487,
+        "duration" : 140
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I wait until registration page is loaded",
+      "uid" : "3e28dcf567b57f29",
+      "parentUid" : "92a1b1fc804a99e87b81e7fdb169ad94",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468297494,
+        "stop" : 1505468297601,
+        "duration" : 107
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "I should be on registration page",
+      "uid" : "cd09ab7d4ababb62",
+      "parentUid" : "92a1b1fc804a99e87b81e7fdb169ad94",
+      "status" : "passed",
+      "time" : {
+        "start" : 1505468297607,
+        "stop" : 1505468297647,
+        "duration" : 40
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "92a1b1fc804a99e87b81e7fdb169ad94"
+  } ]
+}

@@ -7,9 +7,10 @@
     "selenium-server": "node node_modules/selenium-standalone/bin/selenium-standalone start",
     "e2e-setup": "node node_modules/selenium-standalone/bin/selenium-standalone install",
     "e2e": "./node_modules/.bin/wdio ./wdio.conf.js",
-    "e2e-full": "npm run clean-report & npm run e2e & npm run generate-report & npm run open-report"
+    "generate-report": "allure serve ./e2e/test/support/reports/allure/xml/"
   },
   "devDependencies": {
+    "allure-commandline": "2.3.5",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "cucumber": "3.0.1",

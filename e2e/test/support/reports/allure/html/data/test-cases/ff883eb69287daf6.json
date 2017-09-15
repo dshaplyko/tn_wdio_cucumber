@@ -1,0 +1,110 @@
+{
+  "uid" : "ff883eb69287daf6",
+  "name" : "I click OK button in modal",
+  "fullName" : "Login Feature Logging in with incorrect password.I click OK button in modal",
+  "historyId" : "9192f5c808e08897edf28afc3708ba9e",
+  "time" : {
+    "start" : 1505468291742,
+    "stop" : 1505468297205,
+    "duration" : 5463
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/453a81408b06bc6a1000c7d09088f7f3/element",
+      "time" : {
+        "start" : 1505468291744,
+        "stop" : 1505468291776,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "adac83be384deb6d",
+        "name" : "Request",
+        "source" : "adac83be384deb6d.json",
+        "type" : "application/json",
+        "size" : 62
+      }, {
+        "uid" : "8743933522fd1ec4",
+        "name" : "Response",
+        "source" : "8743933522fd1ec4.json",
+        "type" : "application/json",
+        "size" : 138
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /wd/hub/session/453a81408b06bc6a1000c7d09088f7f3/element/0.06252985161233005-11/click",
+      "time" : {
+        "start" : 1505468291781,
+        "stop" : 1505468297169,
+        "duration" : 5388
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "8a84aee5fd5e5129",
+        "name" : "Response",
+        "source" : "8a84aee5fd5e5129.json",
+        "type" : "application/json",
+        "size" : 91
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "testClass",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "testMethod",
+    "value" : "I click OK button in modal"
+  }, {
+    "name" : "package",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "source" : "ff883eb69287daf6.json",
+  "parameterValues" : [ ]
+}

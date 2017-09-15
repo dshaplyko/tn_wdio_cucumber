@@ -26,12 +26,12 @@ exports.config = {
         tagExpression: '@test' */
     },
     //logLevel: 'silent',
-    reporters: ['cucumber'],
-    // reporterOptions: {
-    //     allure: {
-    //         outputDir: './tests/e2e/.reports/allure/xml'
-    //     }
-    // },
+    reporters: ['cucumber', 'allure'],
+    reporterOptions: {
+        allure: {
+            outputDir: './e2e/test/support/reports/allure/xml'
+        }
+    },
     before: function () {
         global.GLOBAL_TIMEOUT = GLOBAL_TIMEOUT;
         browser.windowHandleSize({width: 1024, height: 768});

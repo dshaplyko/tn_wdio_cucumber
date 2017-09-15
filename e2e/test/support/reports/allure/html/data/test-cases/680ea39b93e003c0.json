@@ -1,0 +1,110 @@
+{
+  "uid" : "680ea39b93e003c0",
+  "name" : "Text of error message should be \"Incorrect username or password.\"",
+  "fullName" : "Login Feature Logging in with incorrect password.Text of error message should be \"Incorrect username or password.\"",
+  "historyId" : "729d3c2e04971327f8c22f7caa953ab8",
+  "time" : {
+    "start" : 1505468291672,
+    "stop" : 1505468291740,
+    "duration" : 68
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/453a81408b06bc6a1000c7d09088f7f3/element",
+      "time" : {
+        "start" : 1505468291676,
+        "stop" : 1505468291692,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f296f177fa0cc922",
+        "name" : "Request",
+        "source" : "f296f177fa0cc922.json",
+        "type" : "application/json",
+        "size" : 74
+      }, {
+        "uid" : "b98fc95ae7c381fb",
+        "name" : "Response",
+        "source" : "b98fc95ae7c381fb.json",
+        "type" : "application/json",
+        "size" : 138
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /wd/hub/session/453a81408b06bc6a1000c7d09088f7f3/element/0.06252985161233005-10/text",
+      "time" : {
+        "start" : 1505468291702,
+        "stop" : 1505468291736,
+        "duration" : 34
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5a349b2366634ca6",
+        "name" : "Response",
+        "source" : "5a349b2366634ca6.json",
+        "type" : "application/json",
+        "size" : 120
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "testClass",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "testMethod",
+    "value" : "Text of error message should be \"Incorrect username or password.\""
+  }, {
+    "name" : "package",
+    "value" : "Login Feature Logging in with incorrect password"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "source" : "680ea39b93e003c0.json",
+  "parameterValues" : [ ]
+}
