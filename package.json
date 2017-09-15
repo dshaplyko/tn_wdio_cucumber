@@ -7,7 +7,7 @@
     "selenium-server": "node node_modules/selenium-standalone/bin/selenium-standalone start",
     "e2e-setup": "node node_modules/selenium-standalone/bin/selenium-standalone install",
     "e2e": "./node_modules/.bin/wdio ./wdio.conf.js",
-    "generate-report": "allure serve ./e2e/test/support/reports/allure/xml/"
+    "generate-report": "allure serve ./e2e/test/support/.reports/allure/xml/"
   },
   "devDependencies": {
     "allure-commandline": "2.3.5",

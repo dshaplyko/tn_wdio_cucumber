@@ -10,7 +10,7 @@ exports.config = {
     ],
     sync: true,
     coloredLogs: true,
-    screenshotPath: './e2e/test/support/screenshots',
+    screenshotPath: './e2e/test/support/.screenshots',
     baseUrl: 'http://iwasthere.herokuapp.com/#',
     framework: 'cucumber',
     cucumberOpts: {
@@ -29,7 +29,7 @@ exports.config = {
     reporters: ['cucumber', 'allure'],
     reporterOptions: {
         allure: {
-            outputDir: './e2e/test/support/reports/allure/xml'
+            outputDir: './e2e/test/support/.reports/allure/xml'
         }
     },
     before: function () {
