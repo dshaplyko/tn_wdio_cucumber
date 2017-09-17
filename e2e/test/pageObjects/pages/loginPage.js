@@ -6,6 +6,7 @@ class LoginPage extends Page {
     get password()        { return browser.element("input[name='password']"); }
     get loginButton()     { return browser.element("button[name='login']"); }
     get registerButton()  { return browser.element(".login-footer a"); }
+    get welcomeText()     { return browser.element(".login-header"); }
 
     open() {
         super.open('login');
@@ -32,6 +33,23 @@ class LoginPage extends Page {
     clickRegisterButton() {
         return this.registerButton.click();
     }
+
+    loginFieldIsVisible() {
+        return this.email.isVisible();
+    }
+
+    passwordFieldIsVisible() {
+        return this.password.isVisible();
+    }
+
+    registerLinkIsVisible() {
+        return this.registerButton.isVisible();
+    }
+
+    getWelcomeText() {
+        return this.welcomeText.getText();
+    }
+
 }
 
 module.exports = LoginPage;
