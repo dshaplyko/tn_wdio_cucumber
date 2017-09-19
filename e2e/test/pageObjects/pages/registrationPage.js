@@ -3,7 +3,9 @@ var Page = require('./page')
 
 class RegistrationPage extends Page {
 
-    get registrationForm() { return browser.element(".login-form"); }
+    get registrationForm() { return browser.element(".page-register-route"); }
+    get firstName()        { return browser.element('#form-firstName'); }
+    get lastName()         { return browser.element('#form-lastName'); }
     
     open() {
         super.open('register');
@@ -15,8 +17,16 @@ class RegistrationPage extends Page {
           }, GLOBAL_TIMEOUT, 'login form to be visible');
     }
 
-    registerForIsVisible() {
+    registerFormIsVisible() {
         return this.registrationForm.isVisible();
+    }
+
+    firstNameIsVisible() {
+        return this.firstName.isVisible();
+    }
+
+    lastNameIsVisible() {
+        return this.lastName.isVisible();
     }
 
 }

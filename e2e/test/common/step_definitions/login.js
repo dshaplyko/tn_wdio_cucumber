@@ -4,26 +4,7 @@ const login = new LoginPage();
 
 
 defineSupportCode((cucumber) => {
-    cucumber.Given(/^I am on login page$/, () => {
-        return login.open();
-    });
 
-    cucumber.Then(/^Login field should be visible$/, () => {
-        return expect(login.loginFieldIsVisible()).to.be.true;
-    });
-
-    cucumber.Then(/^Password field should be visible$/, () => {
-        return expect(login.passwordFieldIsVisible()).to.be.true;
-    });
-
-    cucumber.Then(/^Registration link should be visible$/, () => {
-        return expect(login.registerLinkIsVisible()).to.be.true;
-    });   
-    
-    cucumber.Then(/^Text of welcome message should be "([^"]+)"$/, (text) => {
-        return expect(login.getWelcomeText()).to.equal(text);
-    }); 
-    
     cucumber.When(/^I enter credentials$/, () => {
         return login.login();
     });
@@ -43,4 +24,20 @@ defineSupportCode((cucumber) => {
     cucumber.When(/^I click register link$/, () => {
         return login.clickRegisterButton();
     });
+    
+    cucumber.Then(/^Login field should be visible$/, () => {
+        return expect(login.loginFieldIsVisible()).to.be.true;
+    });
+
+    cucumber.Then(/^Password field should be visible$/, () => {
+        return expect(login.passwordFieldIsVisible()).to.be.true;
+    });
+
+    cucumber.Then(/^Registration link should be visible$/, () => {
+        return expect(login.registerLinkIsVisible()).to.be.true;
+    });   
+    
+    cucumber.Then(/^Text of welcome message should be "([^"]+)"$/, (text) => {
+        return expect(login.getWelcomeText()).to.equal(text);
+    }); 
 });
