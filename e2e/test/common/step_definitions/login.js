@@ -29,15 +29,19 @@ defineSupportCode((cucumber) => {
         return expect(login.loginFieldIsVisible()).to.be.true;
     });
 
-    cucumber.Then(/^Password field should be visible$/, () => {
+    cucumber.Then(/^Password field on the login page should be visible$/, () => {
         return expect(login.passwordFieldIsVisible()).to.be.true;
     });
 
-    cucumber.Then(/^Registration link should be visible$/, () => {
+    cucumber.Then(/^Registration link on the login page should be visible$/, () => {
         return expect(login.registerLinkIsVisible()).to.be.true;
     });   
     
     cucumber.Then(/^Text of welcome message should be "([^"]+)"$/, (text) => {
         return expect(login.getWelcomeText()).to.equal(text);
     }); 
+
+    cucumber.Then(/^I should be on login page$/, () => {
+        return expect(login.loginBodyIsVisible()).to.be.true;
+    });
 });

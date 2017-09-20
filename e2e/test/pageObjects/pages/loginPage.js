@@ -2,11 +2,12 @@
 var Page = require('./page')
 
 class LoginPage extends Page {
-    get email()           { return browser.element("input[name='email']"); }
+    get loginBody()       { return browser.element('.page-login-route');       }
+    get email()           { return browser.element("input[name='email']");    }
     get password()        { return browser.element("input[name='password']"); }
-    get loginButton()     { return browser.element("button[name='login']"); }
-    get registerButton()  { return browser.element(".login-footer a"); }
-    get welcomeText()     { return browser.element(".login-header"); }
+    get loginButton()     { return browser.element("button[name='login']");   }
+    get registerButton()  { return browser.element(".login-footer a");        }
+    get welcomeText()     { return browser.element(".login-header");          }
 
     open() {
         super.open('login');
@@ -48,6 +49,10 @@ class LoginPage extends Page {
 
     getWelcomeText() {
         return this.welcomeText.getText();
+    }
+
+    loginBodyIsVisible() {
+        return this.loginBody.isVisible();
     }
 
 }

@@ -4,8 +4,8 @@ As a user I want to be able to login using valud credentials
 Scenario: Verifying items on Login page
   Given I am on "login" page
   Then Login field should be visible
-    And Password field should be visible
-    And Registration link should be visible
+    And Password field on the login page should be visible
+    And Registration link on the login page should be visible
     And Text of welcome message should be "Welcome Back"
 
 Scenario: Logging to the application

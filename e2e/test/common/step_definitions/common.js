@@ -13,12 +13,16 @@ defineSupportCode((cucumber) => {
     cucumber.When(/^I wait until modal appears$/, () => {
         return modal.waitModalVisible();
     });
+
+    cucumber.When(/^I press browser's back button$/, () => {
+        return browser.back();
+    });
     
     cucumber.When(/^I click OK button in modal$/, () => {
         return modal.clickOk();
     });
 
-    cucumber.When(/^I wait for "([^"]+)" seconds$/, (number) => {
+    cucumber.When(/^I wait for ([0-9]) seconds$/, (number) => {
         return browser.pause(number * 1000)
     });
 
