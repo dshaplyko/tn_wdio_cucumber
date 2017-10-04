@@ -17,25 +17,12 @@ defineSupportCode((cucumber) => {
         return login.enterPassword(value);
     });
 
-    cucumber.When(/^I click login button$/, () => {
-        return login.clickLogin();
+    cucumber.When(/^I click '(.*)' link on the login page$/, (item) => {
+        switch (item.toLowerCase()) {
+            case 'login': return login.clickLogin(); break;
+            case 'register': return login.clickRegisterButton(); break;
+        } 
     });
-
-    cucumber.When(/^I click register link$/, () => {
-        return login.clickRegisterButton();
-    });
-    
-    cucumber.Then(/^Login field should be visible$/, () => {
-        return expect(login.loginFieldIsVisible()).to.be.true;
-    });
-
-    cucumber.Then(/^Password field on the login page should be visible$/, () => {
-        return expect(login.passwordFieldIsVisible()).to.be.true;
-    });
-
-    cucumber.Then(/^Registration link on the login page should be visible$/, () => {
-        return expect(login.registerLinkIsVisible()).to.be.true;
-    });   
     
     cucumber.Then(/^Text of welcome message should be "([^"]+)"$/, (text) => {
         return expect(login.getWelcomeText()).to.equal(text);

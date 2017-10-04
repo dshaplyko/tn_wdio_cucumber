@@ -43,7 +43,7 @@ class RegistrationPage extends Page {
         return this.userName.isVisible();
     }
 
-    passwordIsVisible() {
+    passwordFieldIsVisible() {
         return this.password.isVisible();
     }
 
@@ -51,7 +51,7 @@ class RegistrationPage extends Page {
         return this.birthday.isVisible();
     }
 
-    registerButtonIsVisible() {
+    registerLinkIsVisible() {
         return this.registerbutton.isVisible();
     }
 

@@ -2,7 +2,7 @@ Feature: Login Feature
 As a user I want to be able to view a home page
 
 Scenario: Checking elements on the Home Page
-  Given I am on "home" page
+  Given I am on 'home' page
   
   When I click get started button
   Then I should be on registration page

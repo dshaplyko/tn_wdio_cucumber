@@ -6,7 +6,7 @@ const provider = require('../../support/pageObjectProvider');
 
 defineSupportCode((cucumber) => {
 
-    cucumber.Given(/^I am on "([^"]+)" page$/, (pageName) => {
+    cucumber.Given(/^I am on '([^"]+)' page$/, (pageName) => {
         return provider.getPageObjects(pageName).open();
     });
 
@@ -32,5 +32,18 @@ defineSupportCode((cucumber) => {
 
     cucumber.Then(/^Text of error message should be "([^"]+)"$/, (text) => {
         return expect(modal.getModalText()).to.equal(text);
+    });
+
+    cucumber.Then(/^'(.*)' on the '(login|registration)' page should be visible$/, (item, pageName) => {
+        switch (item.toLowerCase()) {
+            case 'first name': return expect(provider.getPageObjects(pageName).firstNameIsVisible()).to.be.true; break;
+            case 'last name': return expect(provider.getPageObjects(pageName).lastNameIsVisible()).to.be.true; break;
+            case 'email': return expect(provider.getPageObjects(pageName).emailIsVisible()).to.be.true; break;
+            case 'username': return expect(provider.getPageObjects(pageName).usernameIsVisible()).to.be.true; break;
+            case 'password': return expect(provider.getPageObjects(pageName).passwordFieldIsVisible()).to.be.true; break;
+            case 'birthday': return expect(provider.getPageObjects(pageName).bithdayIsVisible()).to.be.true; break;
+            case 'register button': return expect(provider.getPageObjects(pageName).registerLinkIsVisible()).to.be.true; break;
+            case 'login field': return expect(provider.getPageObjects(pageName).loginFieldIsVisible()).to.be.true; break;
+        }
     });
 });

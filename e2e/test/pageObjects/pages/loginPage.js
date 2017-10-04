@@ -2,7 +2,7 @@
 var Page = require('./page')
 
 class LoginPage extends Page {
-    get loginBody()       { return browser.element('.page-login-route');       }
+    get loginBody()       { return browser.element('.page-login-route');      }
     get email()           { return browser.element("input[name='email']");    }
     get password()        { return browser.element("input[name='password']"); }
     get loginButton()     { return browser.element("button[name='login']");   }
