@@ -18,7 +18,7 @@ Scenario: Logging in with incorrect credentials
   Given I am on 'login' page
   When I enter "test@test.ru" in username field
     And I enter "12345" in password field
-    And I click 'login' link on the login page
+    And I click 'login' button on the 'login' page
     And I wait until modal appears
   Then Error message should be displayed
     And Text of error message should be "Incorrect username or password."
@@ -26,6 +26,6 @@ Scenario: Logging in with incorrect credentials
 
 Scenario: Clicking on Register link
   Given I am on 'login' page
-  When I click 'register' link on the login page
+  When I click 'register' button on the 'login' page
     And I wait until registration page is loaded
   Then I should be on registration page

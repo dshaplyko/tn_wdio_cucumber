@@ -4,13 +4,13 @@ As a user I want to be able to view a home page
 Scenario: Checking elements on the Home Page
   Given I am on 'home' page
   
-  When I click get started button
+  When I click 'get started' button on the home page
   Then I should be on registration page
 
   When I press browser's back button
-    And I click login button on the page
+    And I click 'login' button on the home page
   Then I should be on login page
 
   When I press browser's back button 
-    And I click sign up button
+    And I click 'sign up' button on the home page
   Then I should be on registration page

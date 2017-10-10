@@ -4,16 +4,11 @@ const home = new HomePage();
 
 defineSupportCode((cucumber) => {
 
-    cucumber.When(/^I click get started button$/, () => {
-        return home.clickGetStarted();
+    cucumber.When(/^I click '(.*)' button on the home page$/, (item) => {
+        switch (item.toLowerCase()) {
+            case 'get started': return home.clickGetStarted(); break;
+            case 'login': return home.clickLogIn(); break;
+            case 'sign up': return home.clickSignUp(); break;
+        } 
     });
-
-    cucumber.When(/^I click login button on the page$/, () => {
-        return home.clickLogIn();
-    });
-
-    cucumber.When(/^I click sign up button$/, () => {
-        return home.clickSignUp();
-    });
-
 });

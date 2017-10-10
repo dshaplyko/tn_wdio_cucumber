@@ -6,8 +6,8 @@ const provider = require('../../support/pageObjectProvider');
 
 defineSupportCode((cucumber) => {
 
-    cucumber.Given(/^I am on '([^"]+)' page$/, (pageName) => {
-        return provider.getPageObjects(pageName).open();
+    cucumber.Given(/^I am on '([^"]+)' page$/, (page) => {
+        return provider.getPage(page).open();
     });
 
     cucumber.When(/^I wait until modal appears$/, () => {
@@ -26,6 +26,14 @@ defineSupportCode((cucumber) => {
         return browser.pause(number * 1000)
     });
 
+    cucumber.When(/^I click '(.*)' button on the '(.*)' page$/, (item, page) => {
+        switch (item.toLowerCase()) {
+            case 'sign in': return provider.getPage(page).clickSignIn(); break;
+            case 'login': return provider.getPage(page).clickLogin(); break;
+            case 'register': return provider.getPage(page).clickRegisterButton(); break;
+        }
+    });
+
     cucumber.Then(/^Error message should be displayed$/, () => {
         return expect(modal.isErrorVisible()).to.be.true;
     });
@@ -34,16 +42,16 @@ defineSupportCode((cucumber) => {
         return expect(modal.getModalText()).to.equal(text);
     });
 
-    cucumber.Then(/^'(.*)' on the '(login|registration)' page should be visible$/, (item, pageName) => {
+    cucumber.Then(/^'(.*)' on the '(login|registration)' page should be visible$/, (item, page) => {
         switch (item.toLowerCase()) {
-            case 'first name': return expect(provider.getPageObjects(pageName).firstNameIsVisible()).to.be.true; break;
-            case 'last name': return expect(provider.getPageObjects(pageName).lastNameIsVisible()).to.be.true; break;
-            case 'email': return expect(provider.getPageObjects(pageName).emailIsVisible()).to.be.true; break;
-            case 'username': return expect(provider.getPageObjects(pageName).usernameIsVisible()).to.be.true; break;
-            case 'password': return expect(provider.getPageObjects(pageName).passwordFieldIsVisible()).to.be.true; break;
-            case 'birthday': return expect(provider.getPageObjects(pageName).bithdayIsVisible()).to.be.true; break;
-            case 'register button': return expect(provider.getPageObjects(pageName).registerLinkIsVisible()).to.be.true; break;
-            case 'login field': return expect(provider.getPageObjects(pageName).loginFieldIsVisible()).to.be.true; break;
+            case 'first name': return expect(provider.getPage(page).firstNameIsVisible()).to.be.true; break;
+            case 'last name': return expect(provider.getPage(page).lastNameIsVisible()).to.be.true; break;
+            case 'email': return expect(provider.getPage(page).emailIsVisible()).to.be.true; break;
+            case 'username': return expect(provider.getPage(page).usernameIsVisible()).to.be.true; break;
+            case 'password': return expect(provider.getPage(page).passwordFieldIsVisible()).to.be.true; break;
+            case 'birthday': return expect(provider.getPage(page).bithdayIsVisible()).to.be.true; break;
+            case 'register button': return expect(provider.getPage(page).registerLinkIsVisible()).to.be.true; break;
+            case 'login field': return expect(provider.getPage(page).loginFieldIsVisible()).to.be.true; break;
         }
     });
 });

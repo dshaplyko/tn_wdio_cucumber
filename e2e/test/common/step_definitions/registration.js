@@ -9,10 +9,6 @@ defineSupportCode((cucumber) => {
         return register.waitUntilRegistrationFormIsDisplayed();
     });
 
-    cucumber.When(/^I click sign in button$/, () => {
-        return register.clickSignIn();
-    });
-
     cucumber.Then(/^I should be on registration page$/, () => {
         return expect(register.registerFormIsVisible()).to.be.true;
     });

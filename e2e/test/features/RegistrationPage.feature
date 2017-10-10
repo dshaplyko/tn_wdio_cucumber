@@ -13,5 +13,5 @@ Scenario: Verifying items on Registration page
 
 Scenario: Verifying items on Registration page
   Given I am on 'registration' page
-  When I click sign in button
+  When I click 'sign in' button on the 'registration' page
   Then I should be on login page
