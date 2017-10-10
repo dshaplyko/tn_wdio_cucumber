@@ -9,14 +9,9 @@ class MainPage extends Page {
         super.open('main');
     }
 
-    waitUntilNotesAreVisible() {
-        browser.waitUntil(() => {
-            return this.notes.isVisible() === true
-          }, GLOBAL_TIMEOUT, 'expected notes to be visible');
-    }
-    
-    toggleAppears() {
-        return this.toggle.isExisting();
+    isPageOpened() {
+        this.notes.waitForVisible(GLOBAL_TIMEOUT);
+        return this.notes.isVisible();
     }
 }
 

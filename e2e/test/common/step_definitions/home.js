@@ -11,4 +11,5 @@ defineSupportCode((cucumber) => {
             case 'sign up': return home.clickSignUp(); break;
         } 
     });
+    
 });

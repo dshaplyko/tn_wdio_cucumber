@@ -23,10 +23,6 @@ class RegistrationPage extends Page {
           }, GLOBAL_TIMEOUT, 'login form to be visible');
     }
 
-    registerFormIsVisible() {
-        return this.registrationForm.isVisible();
-    }
-
     firstNameIsVisible() {
         return this.firstName.isVisible();
     }
@@ -57,6 +53,10 @@ class RegistrationPage extends Page {
 
     clickSignIn() {
         return this.signIn.click();
+    }
+
+    isPageOpened() {
+        return this.registrationForm.isVisible();
     }
 
 }

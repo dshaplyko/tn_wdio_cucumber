@@ -11,8 +11,7 @@ Scenario: Verifying items on Login page
 Scenario: Logging to the application
   Given I am on 'login' page
   When I enter credentials
-    And I wait until main page is loaded
-  Then I should be on main page
+  Then 'Main' page should be opened
     
 Scenario: Logging in with incorrect credentials
   Given I am on 'login' page
@@ -28,4 +27,4 @@ Scenario: Clicking on Register link
   Given I am on 'login' page
   When I click 'register' button on the 'login' page
     And I wait until registration page is loaded
-  Then I should be on registration page
+  Then 'Registration' page should be opened

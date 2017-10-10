@@ -51,10 +51,10 @@ class LoginPage extends Page {
         return this.welcomeText.getText();
     }
 
-    loginBodyIsVisible() {
+    isPageOpened() {
+        this.loginBody.waitForVisible(GLOBAL_TIMEOUT);
         return this.loginBody.isVisible();
     }
-
 }
 
 module.exports = LoginPage;

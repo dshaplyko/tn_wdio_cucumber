@@ -7,7 +7,7 @@ const provider = require('../../support/pageObjectProvider');
 defineSupportCode((cucumber) => {
 
     cucumber.Given(/^I am on '([^"]+)' page$/, (page) => {
-        return provider.getPage(page).open();
+        return provider.getPage(page.toLowerCase()).open();
     });
 
     cucumber.When(/^I wait until modal appears$/, () => {
@@ -54,4 +54,9 @@ defineSupportCode((cucumber) => {
             case 'login field': return expect(provider.getPage(page).loginFieldIsVisible()).to.be.true; break;
         }
     });
+
+    cucumber.Then(/^'(.*)' page should be opened$/, (page) => {
+        return expect(provider.getPage(page.toLowerCase()).isPageOpened()).to.be.true; 
+    });
+
 });

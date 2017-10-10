@@ -20,8 +20,5 @@ defineSupportCode((cucumber) => {
     cucumber.Then(/^Text of welcome message should be "([^"]+)"$/, (text) => {
         return expect(login.getWelcomeText()).to.equal(text);
     }); 
-
-    cucumber.Then(/^I should be on login page$/, () => {
-        return expect(login.loginBodyIsVisible()).to.be.true;
-    });
+    
 });
