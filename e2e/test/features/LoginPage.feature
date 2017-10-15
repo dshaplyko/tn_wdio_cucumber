@@ -26,5 +26,4 @@ Scenario: Logging in with incorrect credentials
 Scenario: Clicking on Register link
   Given I am on 'login' page
   When I click 'register' button on the 'login' page
-    And I wait until registration page is loaded
   Then 'Registration' page should be opened

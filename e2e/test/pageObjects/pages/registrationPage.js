@@ -17,12 +17,6 @@ class RegistrationPage extends Page {
         super.open('register');
     }
 
-    waitUntilRegistrationFormIsDisplayed() {
-        browser.waitUntil(() => {
-            return this.registrationForm.isVisible() === true
-          }, GLOBAL_TIMEOUT, 'login form to be visible');
-    }
-
     firstNameIsVisible() {
         return this.firstName.isVisible();
     }
@@ -56,6 +50,7 @@ class RegistrationPage extends Page {
     }
 
     isPageOpened() {
+        this.registrationForm.waitForVisible(GLOBAL_TIMEOUT);
         return this.registrationForm.isVisible();
     }
 
