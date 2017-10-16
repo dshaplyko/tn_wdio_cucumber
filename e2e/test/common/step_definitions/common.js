@@ -44,14 +44,22 @@ defineSupportCode((cucumber) => {
 
     cucumber.Then(/^'(.*)' on the '(login|registration)' page should be visible$/, (item, page) => {
         switch (item.toLowerCase()) {
-            case 'first name': return expect(provider.getPage(page).firstNameIsVisible()).to.be.true; break;
-            case 'last name': return expect(provider.getPage(page).lastNameIsVisible()).to.be.true; break;
-            case 'email': return expect(provider.getPage(page).emailIsVisible()).to.be.true; break;
-            case 'username': return expect(provider.getPage(page).usernameIsVisible()).to.be.true; break;
-            case 'password': return expect(provider.getPage(page).passwordFieldIsVisible()).to.be.true; break;
-            case 'birthday': return expect(provider.getPage(page).bithdayIsVisible()).to.be.true; break;
-            case 'register button': return expect(provider.getPage(page).registerLinkIsVisible()).to.be.true; break;
-            case 'login field': return expect(provider.getPage(page).loginFieldIsVisible()).to.be.true; break;
+            case 'first name': 
+                return expect(provider.getPage(page).firstNameIsVisible()).to.be.true; 
+            case 'last name': 
+                return expect(provider.getPage(page).lastNameIsVisible()).to.be.true;
+            case 'email': 
+                return expect(provider.getPage(page).emailIsVisible()).to.be.true; 
+            case 'username': 
+                return expect(provider.getPage(page).usernameIsVisible()).to.be.true;
+            case 'password': 
+                return expect(provider.getPage(page).passwordFieldIsVisible()).to.be.true; 
+            case 'birthday': 
+                return expect(provider.getPage(page).bithdayIsVisible()).to.be.true; 
+            case 'register button': 
+                return expect(provider.getPage(page).registerLinkIsVisible()).to.be.true; 
+            case 'login field': 
+                return expect(provider.getPage(page).loginFieldIsVisible()).to.be.true; 
         }
     });
 
