@@ -7,11 +7,11 @@ defineSupportCode((cucumber) => {
     cucumber.When(/^I click '(.*)' button on the home page$/, (item) => {
         switch (item.toLowerCase()) {
             case 'get started': 
-                return home.clickGetStarted();
+                return home.getStartedButton().click();
             case 'login': 
-                return home.clickLogIn();
+                return home.getLoginButton().click();
             case 'sign up': 
-                return home.clickSignUp();
+                return home.getSignUp().click();
         } 
     });
     

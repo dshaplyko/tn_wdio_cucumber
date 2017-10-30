@@ -1,60 +1,47 @@
 "use strict";
-var Page = require('./page')
+const Page = require('./page');
+const Field = require('../webelements/fields/field');
+const Button = require('../webelements/buttons/button');
 
 class LoginPage extends Page {
-    get loginBody()       { return browser.element('.page-login-route');      }
-    get email()           { return browser.element("input[name='email']");    }
-    get password()        { return browser.element("input[name='password']"); }
-    get loginButton()     { return browser.element("button[name='login']");   }
-    get registerButton()  { return browser.element(".login-footer a");        }
-    get welcomeText()     { return browser.element(".login-header");          }
 
     open() {
         super.open('login');
     }
-    
-    enterEmail(email) {
-        return this.email.setValue(email);
+
+    isPageOpened() {
+        this.getLoginBody().waitForVisible(GLOBAL_TIMEOUT);
+        return this.getLoginBody().isVisible();
     }
 
-    enterPassword(password) {
-        return this.password.setValue(password);
+    getLoginBody() { 
+        return browser.element('.page-login-route');      
     }
 
-    clickLogin() {
-        this.loginButton.click();
+    getEmail() { 
+        return new Field (browser.element("input[name='email']"));    
+    }
+    getPassword() { 
+        return new Field (browser.element("input[name='password']")); 
+    }
+
+    getLoginButton() { 
+        return new Button (browser.element("button[name='login']"));   
+    }
+    getRegisterButton() { 
+        return new Button (browser.element(".login-footer a"));        
     }
 
     login() {
-        this.enterEmail("test@test.ru");
-        this.enterPassword("password");
-        this.clickLogin();
-    }
-
-    clickRegisterButton() {
-        return this.registerButton.click();
-    }
-
-    loginFieldIsVisible() {
-        return this.email.isVisible();
-    }
-
-    passwordFieldIsVisible() {
-        return this.password.isVisible();
-    }
-
-    registerLinkIsVisible() {
-        return this.registerButton.isVisible();
+        this.getEmail().typeIn('test@test.ru');
+        this.getPassword().typeIn('password');
+        this.getLoginButton().click();
     }
 
     getWelcomeText() {
-        return this.welcomeText.getText();
+        return browser.element('.login-header').getText();
     }
 
-    isPageOpened() {
-        this.loginBody.waitForVisible(GLOBAL_TIMEOUT);
-        return this.loginBody.isVisible();
-    }
 }
 
 module.exports = LoginPage;

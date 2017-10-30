@@ -1,28 +1,24 @@
 "use strict";
-var Page = require('./page')
+const Page = require('./page');
+const Button = require('../webelements/buttons/button');
 
 class HomePage extends Page {
-
-    get getStarted()  { return browser.element('#getStarted');         }
-    get loginButton() { return browser.element('#loginMenuButton');    }
-    get signUp()      { return browser.element('#registerMenuButton'); }
 
     open() {
         super.open('/');
     }
-    
-    clickGetStarted() {
-        return this.getStarted.click();
+
+    getStartedButton() { 
+        return new Button (browser.element('#getStarted'));         
     }
 
-    clickLogIn() {
-        return this.loginButton.click();
+    getLoginButton() { 
+        return new Button (browser.element('#loginMenuButton'));    
     }
 
-    clickSignUp() {
-        return this.signUp.click();
+    getSignUp() { 
+        return new Button (browser.element('#registerMenuButton')); 
     }
-    
 }
 
 module.exports = HomePage;

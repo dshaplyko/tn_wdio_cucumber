@@ -1,59 +1,55 @@
 "use strict";
-var Page = require('./page')
+const Page = require('./page')
+const Field = require('../../pageObjects/webelements/fields/field');
+const Button = require('../../pageObjects/webelements/buttons/button')
 
 class RegistrationPage extends Page {
 
-    get registrationForm() { return browser.element(".page-register-route");    }
-    get firstName()        { return browser.element('#form-firstName');         }
-    get lastName()         { return browser.element('#form-lastName');          }
-    get email()            { return browser.element('#form-email');             }
-    get userName()         { return browser.element('#form-username');          }
-    get password()         { return browser.element('#form-password');          }
-    get birthday()         { return browser.element('#date-picker-birthday');   }
-    get registerbutton()   { return browser.element("button[name='register']"); }
-    get signIn()           { return browser.element('.logout-footer a');        }
-    
     open() {
         super.open('register');
     }
-
-    firstNameIsVisible() {
-        return this.firstName.isVisible();
-    }
-
-    lastNameIsVisible() {
-        return this.lastName.isVisible();
-    }
-
-    emailIsVisible() {
-        return this.email.isVisible();
-    }
-
-    usernameIsVisible() {
-        return this.userName.isVisible();
-    }
-
-    passwordFieldIsVisible() {
-        return this.password.isVisible();
-    }
-
-    bithdayIsVisible() {
-        return this.birthday.isVisible();
-    }
-
-    registerLinkIsVisible() {
-        return this.registerbutton.isVisible();
-    }
-
-    clickSignIn() {
-        return this.signIn.click();
-    }
-
+    
     isPageOpened() {
-        this.registrationForm.waitForVisible(GLOBAL_TIMEOUT);
-        return this.registrationForm.isVisible();
+        this.getRegistrationForm().waitForVisible(GLOBAL_TIMEOUT);
+        return this.getRegistrationForm().isVisible();
     }
 
+    getRegistrationForm() { 
+        return browser.element(".page-register-route");    
+    }
+
+    getFirstName() { 
+        return new Field (browser.element('#form-firstName'));         
+    }
+
+    getLastName() { 
+        return new Field (browser.element('#form-lastName'));          
+    }
+
+    getEmail() { 
+        return new Field (browser.element('#form-email'));             
+    }
+
+    getUserName() { 
+        return new Field (browser.element('#form-username'));          
+    }
+
+    getPassword() { 
+        return new Field (browser.element('#form-password'));          
+    }
+
+    getBirthday() { 
+        return new Field (browser.element('#date-picker-birthday'));   
+    }
+
+    getRegisterButton() { 
+        return new Button (browser.element("button[name='register']")); 
+    }
+
+    getSignIn() { 
+        return new Button (browser.element('.logout-footer a'));        
+    }
+    
 }
 
 module.exports = RegistrationPage;
