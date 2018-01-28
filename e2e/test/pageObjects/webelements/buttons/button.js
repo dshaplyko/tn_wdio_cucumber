@@ -1,7 +1,7 @@
 "use strict";
-var Webelement = require('../webelement')
+var WebElement = require('../webelement')
 
-class Button extends Webelement {
+class Button extends WebElement {
 
     click() {
         return this.rootEl.click();

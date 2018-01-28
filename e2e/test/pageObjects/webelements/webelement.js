@@ -1,6 +1,6 @@
 "use strict";
 
-class Webelement {
+class WebElement {
 	constructor(el) {
         this.rootEl = el;
     }
@@ -10,4 +10,4 @@ class Webelement {
     };
 
 }
-module.exports = Webelement;
+module.exports = WebElement;

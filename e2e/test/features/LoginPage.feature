@@ -19,7 +19,6 @@ Scenario: Logging in with incorrect credentials
   When I enter "test@test.ru" in username field
     And I enter "12345" in password field
     And I click 'Login' button on the login page
-    And I wait until modal appears
   Then Error message should be displayed
     And Text of error message should be "Incorrect username or password."
   When I click OK button in modal
