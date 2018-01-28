@@ -1,4 +1,4 @@
-# tn_wdio_cucumber
+# Test automation framework for Travel Notes
 
 1. npm install
 2. webdriver-manager update
