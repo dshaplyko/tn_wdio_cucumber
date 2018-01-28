@@ -1,3 +1,4 @@
+@Run
 Feature: Registration Feature
 As a user I want to be able to register a new user
 

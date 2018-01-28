@@ -13,6 +13,7 @@ exports.config = {
     screenshotPath: './e2e/test/support/.screenshots',
     baseUrl: 'http://iwasthere.herokuapp.com/#',
     framework: 'cucumber',
+    tags: ['@Test', '~@Run'],
     cucumberOpts: {
         require: [
             './e2e/test/common/support/index',
@@ -20,7 +21,8 @@ exports.config = {
         ],
         format: ['pretty', 'json:cucumber.json'],
         colors: true,
-        timeout: GLOBAL_TIMEOUT 
+        timeout: GLOBAL_TIMEOUT,
+        tagExpression: 'not @Run',
 
         /*Use the parameter to run a test
         tagExpression: '@test' */
