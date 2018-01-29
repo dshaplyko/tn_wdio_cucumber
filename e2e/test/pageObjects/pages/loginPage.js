@@ -21,6 +21,7 @@ class LoginPage extends Page {
     getEmail() { 
         return new Field (browser.element("input[name='email']"));    
     }
+    
     getPassword() { 
         return new Field (browser.element("input[name='password']")); 
     }

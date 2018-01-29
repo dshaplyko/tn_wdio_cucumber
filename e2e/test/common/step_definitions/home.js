@@ -1,6 +1,8 @@
 const { defineSupportCode } = require('cucumber');
 const HomePage = require('../../pageObjects/pages/homePage');
 const home = new HomePage();
+const Page = require('../../pageObjects/pages/page');
+const page = new Page();
 
 defineSupportCode((cucumber) => {
 
@@ -9,9 +11,9 @@ defineSupportCode((cucumber) => {
             case 'get started': 
                 return home.getStartedButton().click();
             case 'login': 
-                return home.getLoginButton().click();
+                return page.header().getLoginButton().click();
             case 'sign up': 
-                return home.getSignUp().click();
+                return page.header().getSignUp().click();
         } 
     });
     

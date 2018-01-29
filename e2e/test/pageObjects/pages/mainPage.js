@@ -1,5 +1,5 @@
 "use strict";
-var Page = require('./page')
+const Page = require('./page')
 
 class MainPage extends Page {
     get notes() { 

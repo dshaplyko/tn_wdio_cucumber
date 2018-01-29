@@ -1,5 +1,5 @@
 "use strict";
-var WebElement = require('../webelements/webelement')
+const WebElement = require('../webelements/webelement')
 
 class ModalWindow extends WebElement  {
     constructor(el) {

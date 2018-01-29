@@ -11,14 +11,6 @@ class HomePage extends Page {
     getStartedButton() { 
         return new Button (browser.element('#getStarted'));         
     }
-
-    getLoginButton() { 
-        return new Button (browser.element('#loginMenuButton'));    
-    }
-
-    getSignUp() { 
-        return new Button (browser.element('#registerMenuButton')); 
-    }
 }
 
 module.exports = HomePage;

@@ -1,5 +1,5 @@
 "use strict";
-var WebElement = require('../webelement')
+const WebElement = require('../webelement')
 
 class Field extends WebElement {
 
