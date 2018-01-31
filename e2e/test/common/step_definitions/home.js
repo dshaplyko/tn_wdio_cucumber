@@ -11,9 +11,9 @@ defineSupportCode((cucumber) => {
             case 'get started': 
                 return home.getStartedButton().click();
             case 'login': 
-                return page.header().getLoginButton().click();
+                return page.getHeader().getLoginButton().click();
             case 'sign up': 
-                return page.header().getSignUp().click();
+                return page.getHeader().getSignUp().click();
         } 
     });
     

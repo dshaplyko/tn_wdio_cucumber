@@ -6,6 +6,11 @@ class Page {
 	constructor() {
         this.title = 'My Page';
     }
+
+    /*
+    It is needed to refactor it
+    */
+
     get modalWindow() { 
         return browser.element('.sweet-alert'); 
     }
@@ -14,12 +19,12 @@ class Page {
 		browser.url('/#' + path);
     }
 
-    header() {
+    getHeader() {
         return new Header (browser.element('.header')); 
     }
 
-    footer() {
-        return new Header (browser.element('.footer')); 
+    getFooter() {
+        return new Footer (browser.element('.footer')); 
     }
 }
 module.exports = Page;
