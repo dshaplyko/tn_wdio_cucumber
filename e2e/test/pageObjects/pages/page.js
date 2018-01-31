@@ -1,6 +1,7 @@
 "use strict";
 const Header = require('../webelements/blocks/header');
 const Footer = require('../webelements/blocks/footer');
+const ModalWindow = require('../../pageObjects/modals/modal');
 
 class Page {
 	constructor() {
@@ -11,8 +12,8 @@ class Page {
     It is needed to refactor it
     */
 
-    get modalWindow() { 
-        return browser.element('.sweet-alert'); 
+    getModal() { 
+        return new ModalWindow (browser.element('.sweet-alert')); 
     }
 
 	open(path) {
