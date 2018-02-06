@@ -28,4 +28,5 @@ class Page {
         return new Footer (browser.element('.footer')); 
     }
 }
+
 module.exports = Page;

@@ -1,13 +1,12 @@
 const { defineSupportCode } = require('cucumber');
+const pages = require('../../pageObjects/pages');
 const ModalWindow = require('../../pageObjects/modals/modal');
 const modal = new ModalWindow();
-const provider = require('../../support/pageObjectProvider');
-
 
 defineSupportCode((cucumber) => {
 
     cucumber.Given(/^I am on '([^"]+)' page$/, (page) => {
-        return provider.getPage(page.toLowerCase()).open();
+        return pages.getPage(page).open()
     });
 
     cucumber.When(/^I wait until modal appears$/, () => {
@@ -35,7 +34,7 @@ defineSupportCode((cucumber) => {
     });
 
     cucumber.Then(/^'(.*)' page should be opened$/, (page) => {
-        return expect(provider.getPage(page.toLowerCase()).isPageOpened()).to.be.true; 
+        return expect(pages.getPage(page).isPageOpened()).to.be.true; 
     });
 
 });
