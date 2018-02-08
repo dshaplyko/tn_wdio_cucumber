@@ -3,7 +3,7 @@ const WebElement = require('../webelement');
 const Field = require('../fields/field');
 const Button = require('../buttons/button')
 
-class LoginForm extends WebElement {
+class Form extends WebElement {
 
 
     getElement(elm) {
@@ -21,4 +21,4 @@ class LoginForm extends WebElement {
 
 }
 
-module.exports = LoginForm;
+module.exports = Form;

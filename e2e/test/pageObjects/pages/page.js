@@ -17,7 +17,8 @@ class Page {
     }
 
 	open(path) {
-		browser.url('/#' + path);
+        browser.reload();
+        browser.url('/#' + path);
     }
 
     getHeader() {

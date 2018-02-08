@@ -2,7 +2,7 @@
 const Page = require('./page')
 const Field = require('../../pageObjects/webelements/fields/field');
 const Button = require('../../pageObjects/webelements/buttons/button')
-const LoginForm = require('../webelements/forms/loginForm');
+const Form = require('../webelements/forms/form');
 class RegistrationPage extends Page {
 
     open() {
@@ -14,8 +14,8 @@ class RegistrationPage extends Page {
         return this.getRegistrationForm().isVisible();
     }
 
-    getLoginForm() {
-        return new LoginForm (browser.element('.login-form'));
+    getForm() {
+        return new Form (browser.element('.login-form'));
     }
 
     getRegistrationForm() { 
