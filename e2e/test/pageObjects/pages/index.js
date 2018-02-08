@@ -29,7 +29,7 @@ exports.getPage = function(key){
     switch (key.toLowerCase()) {
         case 'home': return new HomePage();
         case 'main': return new MainPage();
-        case 'login': return new LoginPage();
+        case 'login': return new LoginPage(); break;
         case 'registration': return new RegistrationPage();
         default: return new Page();
     }

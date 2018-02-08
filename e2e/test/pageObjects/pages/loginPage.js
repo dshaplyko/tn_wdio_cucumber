@@ -2,6 +2,7 @@
 const Page = require('./page');
 const Field = require('../webelements/fields/field');
 const Button = require('../webelements/buttons/button');
+const LoginForm = require('../webelements/forms/loginForm');
 
 class LoginPage extends Page {
 
@@ -14,29 +15,12 @@ class LoginPage extends Page {
         return this.getLoginBody().isVisible();
     }
 
+    getLoginForm() {
+        return new LoginForm (browser.element('.login-form'));
+    }
+
     getLoginBody() { 
         return browser.element('.page-login-route');      
-    }
-
-    getEmail() { 
-        return new Field (browser.element("input[name='email']"));    
-    }
-    
-    getPassword() { 
-        return new Field (browser.element("input[name='password']")); 
-    }
-
-    getLoginButton() { 
-        return new Button (browser.element("button[name='login']"));   
-    }
-    getRegisterButton() { 
-        return new Button (browser.element(".login-footer a"));        
-    }
-
-    login() {
-        this.getEmail().typeIn('test@test.ru');
-        this.getPassword().typeIn('password');
-        this.getLoginButton().click();
     }
 
     getWelcomeText() {

@@ -1,6 +1,7 @@
 "use strict";
 
 class WebElement {
+    
 	constructor(el) {
         this.rootEl = el;
     }

@@ -6,7 +6,7 @@ const modal = new ModalWindow();
 defineSupportCode((cucumber) => {
 
     cucumber.Given(/^I am on '([^"]+)' page$/, (page) => {
-        return pages.getPage(page).open()
+        return pages.getPage(page).open();
     });
 
     cucumber.When(/^I wait until modal appears$/, () => {
