@@ -4,3 +4,4 @@ require('../step_definitions/main');
 require('../step_definitions/registration');
 require('../step_definitions/home');
 require('../step_definitions/loginForm');
+require('../step_definitions/modal');

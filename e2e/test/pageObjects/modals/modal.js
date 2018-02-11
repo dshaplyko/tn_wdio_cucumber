@@ -1,47 +1,35 @@
 "use strict";
-const WebElement = require('../webelements/webelement')
+const WebElement = require('../webelements/webelement');
+const Button = require('../webelements/buttons/button');
 
-class ModalWindow extends WebElement  {
+class Modal extends WebElement  {
     constructor(el) {
         super(el)
     }
 
-    get body() { 
-        return browser.element('.sweet-alert'); 
-    
-    }
-    get message() { 
-        return browser.element("p[style='display: block;']"); 
-    }
-
-    get okButton() { 
-        return browser.element("button.confirm"); 
-    }
-
     modalIsDisplayed() {
-        this.body().waitForVisible(GLOBAL_TIMEOUT);
-        return this.body.isVisible();
+        this.rootEl.waitForVisible(GLOBAL_TIMEOUT);
+        return this.rootEl.isVisible();
     }
 
-    // waitModalVisible() {
-    //     browser.waitUntil(() => {
-    //         return this.modalIsDisplayed() === true
-    //       }, GLOBAL_TIMEOUT, 'expected modal to be visible');
-    // }
 
-    isErrorVisible() {
-        this.message.waitForVisible(GLOBAL_TIMEOUT);
-        return this.message.isVisible();
+    getOkButton() { 
+        return new Button (browser.element("button.confirm")); 
     }
 
     getModalText() {
-        return this.message.getText();
+        return browser.element("p[style='display: block;']").getText();
     }
 
-    clickOk() {
-        return this.okButton.click();
+    getMessage() { 
+        return  
     }
 
+    isErrorVisible() {
+        let message = browser.element("p[style='display: block;']");
+        message.waitForVisible(GLOBAL_TIMEOUT);
+        return message.isVisible();
+    }
 }
 
-module.exports = ModalWindow;
+module.exports = Modal;
