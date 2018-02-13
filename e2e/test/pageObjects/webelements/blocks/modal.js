@@ -1,6 +1,6 @@
 "use strict";
-const WebElement = require('../webelements/webelement');
-const Button = require('../webelements/buttons/button');
+const WebElement = require('../webelement');
+const Button = require('../buttons/button');
 
 class Modal extends WebElement  {
     constructor(el) {
