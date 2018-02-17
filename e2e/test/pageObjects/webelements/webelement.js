@@ -8,7 +8,7 @@ class WebElement {
 
     isVisible() {
         return this.rootEl.isVisible();
-    };
+    }
 
 }
 module.exports = WebElement;

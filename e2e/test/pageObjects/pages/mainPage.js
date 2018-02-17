@@ -12,10 +12,18 @@ class MainPage extends Page {
         return this.getNotes().isVisible();
     }
     
+    /*
+    *Initializes notes list
+    * @returns {Element}
+    */
     getNotes() { 
         return browser.element(".notes-grid");   
     }
 
+    /*
+    *Initializes toggle for all/my notes
+    * @returns {Element}
+    */
     getToggle() { 
         return browser.element('#onlyMyButton'); 
     }
