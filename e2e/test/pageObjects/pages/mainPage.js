@@ -1,5 +1,6 @@
 "use strict";
-const Page = require('./page')
+const Page = require('./page');
+const Note = require('../webelements/structures/note');
 
 class MainPage extends Page {
 
@@ -8,7 +9,6 @@ class MainPage extends Page {
     }
 
     isPageOpened() {
-        this.getNotes().waitForVisible(GLOBAL_TIMEOUT);
         return this.getNotes().isVisible();
     }
     
@@ -17,7 +17,8 @@ class MainPage extends Page {
     * @returns {Element}
     */
     getNotes() { 
-        return browser.element(".notes-grid");   
+        browser.element('.notes-grid').waitForVisible(GLOBAL_TIMEOUT);
+        return new Note (browser.element(".notes-grid"));   
     }
 
     /*

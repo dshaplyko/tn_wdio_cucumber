@@ -12,17 +12,20 @@ class Modal extends WebElement  {
         return this.rootEl.isVisible();
     }
 
-
+    /*
+    *Initializes the Ok button in the modal
+    * @returns {Button}
+    */
     getOkButton() { 
         return new Button (browser.element("button.confirm")); 
     }
 
+    /*
+    *Gets text of the modal window
+    * @returns text message
+    */
     getModalText() {
         return browser.element("p[style='display: block;']").getText();
-    }
-
-    getMessage() { 
-        return  
     }
 
     isErrorVisible() {
