@@ -10,5 +10,9 @@ class WebElement {
         return this.rootEl.isVisible();
     }
 
+    isExisting() {
+        return this.rootEl.isExisting();
+    }
+
 }
 module.exports = WebElement;
