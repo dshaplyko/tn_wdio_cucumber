@@ -7,6 +7,15 @@ defineSupportCode((cucumber) => {
         return expect(pages.atMainPage().getNotes().isVisible()).to.equal(true);
     });
 
+    cucumber.Then(/^the '(.*)' (is|is not) visible on the Main page$/, (element, condition) => {
+        switch(element.toLowerCase()) {
+            case 'filter':
+                return expect(pages.atMainPage().getFilter().isVisible()).to.equal(condition === 'is');
+            case 'toggle':
+                return expect(pages.atMainPage().getToggle().isVisible()).to.equal(condition === 'is');
+        }      
+    });
+
     cucumber.Then(/^each of note entry has '(.*)'$/, (item) => {
         switch (item.toLowerCase()) {
             case 'title':
@@ -16,7 +25,7 @@ defineSupportCode((cucumber) => {
         }
     });
 
-    cucumber.Then(/^I click on the random note item$/, () => {
+    cucumber.When(/^I click on the random note item$/, () => {
         let notes = pages.atMainPage().getNotes().getNote();
         return browser.elementIdClick(notes.value[Math.floor(Math.random() * (notes.value.length - 1))].ELEMENT);
     });

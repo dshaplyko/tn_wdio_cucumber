@@ -19,7 +19,7 @@ class RegistrationPage extends Page {
     }
 
     getRegistrationForm() { 
-        return browser.element(".page-register-route");    
+        return browser.element('.page-register-route');    
     }
 
     getSignIn() { 

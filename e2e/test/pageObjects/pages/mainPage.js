@@ -1,6 +1,8 @@
 "use strict";
 const Page = require('./page');
 const Note = require('../webelements/structures/note');
+const Checkbox = require('../webelements/checkboxes/checkbox');
+const Filter = require('../webelements/components/filter');
 
 class MainPage extends Page {
 
@@ -18,15 +20,23 @@ class MainPage extends Page {
     */
     getNotes() { 
         browser.element('.notes-grid').waitForVisible(GLOBAL_TIMEOUT);
-        return new Note (browser.element(".notes-grid"));   
+        return new Note (browser.element('.notes-grid'));   
     }
 
     /*
     *Initializes toggle for all/my notes
-    * @returns {Element}
+    * @returns {Checkbox}
     */
     getToggle() { 
-        return browser.element('#onlyMyButton'); 
+        return new Checkbox (browser.element('#onlyMyButton')); 
+    }
+
+    /*
+    *Initializes filter for notes
+    * @returns {Filter}
+    */
+    getFilter() {
+        return new Filter (browser.element('.filter-item'));
     }
 }
 
