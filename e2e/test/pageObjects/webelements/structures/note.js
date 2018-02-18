@@ -8,7 +8,7 @@ class Note extends WebElement {
     * @returns {elements}
     */
     getNote() {
-        return this.rootEl.browser.elements('.note-grid-item');
+        return this.rootEl.elements('.note-grid-item');
     }
 
     /*

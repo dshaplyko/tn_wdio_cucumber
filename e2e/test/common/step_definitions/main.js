@@ -16,4 +16,9 @@ defineSupportCode((cucumber) => {
         }
     });
 
+    cucumber.Then(/^I click on the random note item$/, () => {
+        let notes = pages.atMainPage().getNotes().getNote();
+        return browser.elementIdClick(notes.value[Math.floor(Math.random() * (notes.value.length - 1))].ELEMENT);
+    });
+
 });

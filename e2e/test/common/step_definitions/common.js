@@ -18,5 +18,4 @@ defineSupportCode((cucumber) => {
     cucumber.Then(/^'(.*)' page should be opened$/, (page) => {
         return expect(pages.getPage(page).isPageOpened()).to.be.true; 
     });
-
 });

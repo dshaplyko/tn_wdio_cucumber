@@ -8,10 +8,11 @@ Scenario: 1. Verifying items on Main page
    And each of note entry has 'title'
    And each of note entry has 'substile'
 
-#Scenario: 2. Opening a note item
-   #Given I am on 'main' page
-   #When I click on the random note item
-   #Then 'Note' page should be opened
+Scenario: 2. Opening a note item
+   Given I am on 'main' page
+   Then the list of notes should be displayed
+   When I click on the random note item
+   Then 'Note' page should be opened
 
 
    

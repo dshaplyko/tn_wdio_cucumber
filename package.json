@@ -20,7 +20,8 @@
     "wdio-mocha-framework": "0.5.8",
     "wdio-screenshot": "0.5.2",
     "wdio-spec-reporter": "0.0.5",
-    "webdriverio": "4.8.0"
+    "webdriverio": "4.8.0",
+    "underscore": "1.8.3"
   },
   "author": "DS",
   "license": "ISC"
