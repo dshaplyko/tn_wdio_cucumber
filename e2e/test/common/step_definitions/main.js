@@ -7,10 +7,10 @@ defineSupportCode((cucumber) => {
         return expect(pages.atMainPage().getNotes().isVisible()).to.equal(true);
     });
 
-    cucumber.Then(/^the '(.*)' element (is|is not) visible on the Main page$/, (element, condition) => {
+    cucumber.Then(/^the '(.*)' element (is|is not) existing on the Main page$/, (element, condition) => {
         switch(element.toLowerCase()) {
             case 'filter':
-                return expect(pages.atMainPage().getFilter().isVisible()).to.equal(condition === 'is');
+                return expect(pages.atMainPage().getFilter().isExisting()).to.equal(condition === 'is');
             case 'toggle':
                 return expect(pages.atMainPage().getToggle().isExisting()).to.equal(condition === 'is');
         }      
