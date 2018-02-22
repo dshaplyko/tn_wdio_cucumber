@@ -16,6 +16,9 @@ defineSupportCode((cucumber) => {
         }      
     });
 
+    /*
+    *It is needed to rewrite the step so we will check if each of note entry contains expected field
+    */
     cucumber.Then(/^each of note entry has '(.*)'$/, (item) => {
         switch (item.toLowerCase()) {
             case 'title':
