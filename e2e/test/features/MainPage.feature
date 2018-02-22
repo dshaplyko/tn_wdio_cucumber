@@ -8,7 +8,7 @@ Scenario: 1. Verifying items on Main page as a visitor
     And the 'Filter' element is existing on the Main page
     And the 'Toggle' element is not existing on the Main page
     And each of note entry has 'title'
-    And each of note entry has 'substile'
+    And each of note entry has 'substitle'
 
 Scenario: 1. Verifying items on Main page as a logged in user
    Given I am on 'login' page
@@ -18,7 +18,7 @@ Scenario: 1. Verifying items on Main page as a logged in user
     And the 'Filter' element is existing on the Main page
     And the 'Toggle' element is existing on the Main page
     And each of note entry has 'title'
-    And each of note entry has 'substile'
+    And each of note entry has 'substitle'
 
 Scenario: 2. Opening a note item
    Given I am on 'main' page

@@ -1,6 +1,6 @@
 "use strict";
 const Page = require('./page');
-const Note = require('../webelements/structures/note');
+const NotesGrid = require('../webelements/structures/notesGrid');
 const Checkbox = require('../webelements/checkboxes/checkbox');
 const Filter = require('../webelements/components/filter');
 
@@ -10,17 +10,21 @@ class MainPage extends Page {
         super.open('main');
     }
 
+    /*
+    *Checks if a page is opened
+    * @returns {boolean}
+    */
     isPageOpened() {
-        return this.getNotes().isVisible();
+        return this.getNotesGrid().isVisible();
     }
     
     /*
     *Initializes notes list
     * @returns {Element}
     */
-    getNotes() { 
+    getNotesGrid() { 
         browser.element('.notes-grid').waitForVisible(GLOBAL_TIMEOUT);
-        return new Note (browser.element('.notes-grid'));   
+        return new NotesGrid (browser.element('.notes-grid'));   
     }
 
     /*

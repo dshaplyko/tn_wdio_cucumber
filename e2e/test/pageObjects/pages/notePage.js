@@ -1,6 +1,5 @@
 "use strict";
 const Page = require('./page');
-const Note = require('../webelements/structures/note');
 
 class NotePage extends Page {
 
