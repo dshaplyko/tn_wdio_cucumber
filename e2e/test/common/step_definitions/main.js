@@ -16,6 +16,9 @@ defineSupportCode((cucumber) => {
         }      
     });
 
+    /*
+    *It is needed to rewrite the step so we will check if each of note entry contains expected field
+    */
     cucumber.Then(/^each of note entry has '(.*)'$/, (item) => {
         let countTitles = pages.atMainPage().getNotesGrid().getNoteTitles().value.length;
         let countSubTitles = pages.atMainPage().getNotesGrid().getNoteSubTitles().value.length;
