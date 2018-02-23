@@ -25,4 +25,4 @@ Scenario: 2. Opening a note item
    Then the list of notes should be displayed
    When I click on the random note item and store its title
    Then 'Note' page should be opened
-    And the title of the event should be equal to the stored one
+    And the title of the opened note should be equal to the stored one

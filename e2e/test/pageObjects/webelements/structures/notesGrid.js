@@ -12,11 +12,19 @@ class NotesGrid extends WebElement {
     }
 
     /*
-    *Gets the note's title
+    *Gets the notes titles
     * @returns {object}
     */
     getNoteTitles() {
         return this.rootEl.elements('.note-grid-item .title');
+    }
+
+    /*
+    *Gets the note subtitles
+    * @returns {object}
+    */
+    getNoteSubTitles() {
+        return this.rootEl.elements('.note-grid-item .subtitle');
     }
 
     /*
@@ -26,15 +34,6 @@ class NotesGrid extends WebElement {
     getTitle(index) {
         return this.rootEl.element(`.note-grid-item:nth-child(${++index}) .title`).getText();
     }
-
-    /*
-    *Gets the note's subtitle
-    * @returns {object}
-    */
-    getNoteSubTitles() {
-        return this.rootEl.elements('.note-grid-item .subtitle');
-    }
-
 }
 
 module.exports = NotesGrid;

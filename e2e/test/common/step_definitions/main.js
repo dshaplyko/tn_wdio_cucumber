@@ -21,6 +21,7 @@ defineSupportCode((cucumber) => {
         let countSubTitles = pages.atMainPage().getNotesGrid().getNoteSubTitles().value.length;
         let countNotes = pages.atMainPage().getNotesGrid().getNotes().value.length;
         const valueToCompare = item.toLowerCase() === 'title' ? countTitles : countSubTitles;
+
         return expect(countNotes).to.equal(valueToCompare);
     });
 
@@ -33,7 +34,7 @@ defineSupportCode((cucumber) => {
         return browser.elementIdClick(notes.value[randomValue].value.ELEMENT);
     });
 
-    cucumber.Then(/^the title of the event should be equal to the stored one$/, () => {
+    cucumber.Then(/^the title of the opened note should be equal to the stored one$/, () => {
         return expect(pages.atNotePage().getTitle()).to.equal(global.stored_title);
     });
 });
