@@ -16,18 +16,12 @@ defineSupportCode((cucumber) => {
         }      
     });
 
-    /*
-    *It is needed to rewrite the step so we will check if each of note entry contains expected field
-    */
     cucumber.Then(/^each of note entry has '(.*)'$/, (item) => {
         let countTitles = pages.atMainPage().getNotesGrid().getNoteTitles().value.length;
         let countSubTitles = pages.atMainPage().getNotesGrid().getNoteSubTitles().value.length;
         let countNotes = pages.atMainPage().getNotesGrid().getNotes().value.length;
-
-        if (item.toLowerCase() === 'title') {
-            return expect(countNotes).to.equal(countTitles);
-        }
-        return expect(countNotes).to.equal(countSubTitles);
+        const valueToCompare = item.toLowerCase() === 'title' ? countTitles : countSubTitles;
+        return expect(countNotes).to.equal(valueToCompare);
     });
 
     cucumber.When(/^I click on the random note item$/, () => {

@@ -9,21 +9,17 @@ class RegistrationPage extends Page {
         super.open('register');
     }
     
+    /*
+    *Checks if a page is opened
+    * @returns {boolean}
+    */
     isPageOpened() {
-        this.getRegistrationForm().waitForVisible(GLOBAL_TIMEOUT);
-        return this.getRegistrationForm().isVisible();
+        return this.getForm().isVisible();
     }
 
     getForm() {
+        browser.element('.login-form').waitForVisible(GLOBAL_TIMEOUT);
         return new Form (browser.element('.login-form'));
-    }
-
-    getRegistrationForm() { 
-        return browser.element('.page-register-route');    
-    }
-
-    getSignIn() { 
-        return new Button (browser.element('.logout-footer a'));        
     }
     
 }

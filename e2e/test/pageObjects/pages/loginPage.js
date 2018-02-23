@@ -10,12 +10,16 @@ class LoginPage extends Page {
         super.open('login');
     }
 
+    /*
+    *Checks if a page is opened
+    * @returns {boolean}
+    */
     isPageOpened() {
-        this.getLoginBody().waitForVisible(GLOBAL_TIMEOUT);
-        return this.getLoginBody().isVisible();
+        return this.getForm().isVisible();
     }
 
     getForm() {
+        browser.element('.login-form').waitForVisible(GLOBAL_TIMEOUT);
         return new Form (browser.element('.login-form'));
     }
 

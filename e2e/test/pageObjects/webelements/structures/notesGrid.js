@@ -5,7 +5,7 @@ class NotesGrid extends WebElement {
 
     /*
     *Gets the note
-    * @returns {elements}
+    * @returns {object}
     */
     getNotes() {
         return this.rootEl.elements('.note-grid-item:not(.add)');
@@ -13,7 +13,7 @@ class NotesGrid extends WebElement {
 
     /*
     *Gets the note's title
-    * @returns {text}
+    * @returns {object}
     */
     getNoteTitles() {
         return this.rootEl.elements('.note-grid-item .title');
@@ -21,7 +21,7 @@ class NotesGrid extends WebElement {
 
     /*
     *Gets the note's subtitle
-    * @returns {text}
+    * @returns {object}
     */
     getNoteSubTitles() {
         return this.rootEl.elements('.note-grid-item .subtitle');

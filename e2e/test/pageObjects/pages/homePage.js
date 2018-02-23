@@ -8,6 +8,10 @@ class HomePage extends Page {
         super.open('/');
     }
 
+    /*
+    *Initializes Get Started Button on the home page
+    *@returns {Button}
+    */
     getStartedButton() { 
         return new Button (browser.element('#getStarted'));         
     }
