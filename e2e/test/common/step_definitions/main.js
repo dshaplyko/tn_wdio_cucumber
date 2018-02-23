@@ -24,9 +24,16 @@ defineSupportCode((cucumber) => {
         return expect(countNotes).to.equal(valueToCompare);
     });
 
-    cucumber.When(/^I click on the random note item$/, () => {
+    cucumber.When(/^I click on the random note item and store its title$/, () => {
         let notes = pages.atMainPage().getNotesGrid().getNotes();
-        return browser.elementIdClick(notes.value[Math.floor(Math.random() * (notes.value.length - 1))].ELEMENT);
+        let randomValue = Math.floor(Math.random() * (notes.value.length - 1));
+
+        global.stored_title = pages.atMainPage().getNotesGrid().getTitle(randomValue);
+        console.log('Title is: ' + global.stored_title);
+        return browser.elementIdClick(notes.value[randomValue].value.ELEMENT);
     });
 
+    cucumber.Then(/^the title of the event should be equal to the stored one$/, () => {
+        return expect(pages.atNotePage().getTitle()).to.equal(global.stored_title);
+    });
 });

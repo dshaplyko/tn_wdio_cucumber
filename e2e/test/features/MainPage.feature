@@ -1,4 +1,4 @@
-@Run 
+@Test 
 Feature: Main Feature
 As a user I want to be able to navigate and use the Main page
 
@@ -23,5 +23,6 @@ Scenario: 1. Verifying items on Main page as a logged in user
 Scenario: 2. Opening a note item
    Given I am on 'main' page
    Then the list of notes should be displayed
-   When I click on the random note item
+   When I click on the random note item and store its title
    Then 'Note' page should be opened
+    And the title of the event should be equal to the stored one

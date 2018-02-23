@@ -20,6 +20,14 @@ class NotesGrid extends WebElement {
     }
 
     /*
+    *Gets a title of an appropriate note
+    * @returns {String}
+    */
+    getTitle(index) {
+        return this.rootEl.element(`.note-grid-item:nth-child(${++index}) .title`).getText();
+    }
+
+    /*
     *Gets the note's subtitle
     * @returns {object}
     */
