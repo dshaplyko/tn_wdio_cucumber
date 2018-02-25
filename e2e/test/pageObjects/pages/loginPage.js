@@ -18,15 +18,19 @@ class LoginPage extends Page {
         return this.getForm().isVisible();
     }
 
+    /*
+    *Initializes Form 
+    * @returns {Form}
+    */
     getForm() {
         browser.element('.login-form').waitForVisible(GLOBAL_TIMEOUT);
         return new Form (browser.element('.login-form'));
     }
 
-    getLoginBody() { 
-        return browser.element('.page-login-route');      
-    }
-
+    /*
+    *Initializes text on the login page 
+    * @returns {String}
+    */
     getWelcomeText() {
         return browser.element('.login-header').getText();
     }
