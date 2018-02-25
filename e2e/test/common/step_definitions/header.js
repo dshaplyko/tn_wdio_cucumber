@@ -16,8 +16,12 @@ defineSupportCode((cucumber) => {
         return expect(pages.atBasePage().getHeader().getLogo().isVisible()).to.equal(true);
     });
 
-    cucumber.Then(/^I click on on the Logo$/, () => {
+    cucumber.When(/^I click on on the Logo$/, () => {
         return pages.atBasePage().getHeader().getLogo().click();
     });
 
+    cucumber.When(/^I click on on the menu button$/, () => {
+        return pages.atBasePage().getHeader().getMenuButton().click();
+    });
+    
 });

@@ -29,8 +29,12 @@ class Header extends WebElement {
         return new Link (this.rootEl.element('.logo'));
     }
 
+    /*
+    * Initiates Menu Button in the Header
+    * @returns {Button}
+    */
     getMenuButton() {
-        return new Button (this.rootEl.element(''));
+        return new Button (this.rootEl.element('span.menu-button'));
     }
 }
 
