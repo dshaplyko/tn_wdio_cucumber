@@ -5,3 +5,5 @@ require('../step_definitions/registration');
 require('../step_definitions/home');
 require('../step_definitions/form');
 require('../step_definitions/modal');
+require('../step_definitions/footer');
+require('../step_definitions/header');

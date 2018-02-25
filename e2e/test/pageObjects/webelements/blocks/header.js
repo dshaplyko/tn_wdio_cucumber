@@ -1,6 +1,7 @@
 "use strict";
 const WebElement = require('../webelement');
 const Button = require('../buttons/button');
+const Link = require('../links/link');
 
 class Header extends WebElement {
 
@@ -9,7 +10,7 @@ class Header extends WebElement {
     * @returns {Button}
     */
     getLoginButton() { 
-        return new Button (browser.element('#loginMenuButton'));    
+        return new Button (this.rootEl.element('#loginMenuButton'));    
     }
 
     /*
@@ -17,7 +18,19 @@ class Header extends WebElement {
     * @returns {Button}
     */
     getSignUp() { 
-        return new Button (browser.element('#registerMenuButton')); 
+        return new Button (this.rootEl.element('#registerMenuButton')); 
+    }
+
+    /*
+    * Initiates Logo in the Header
+    * @returns {Link}
+    */
+    getLogo() {
+        return new Link (this.rootEl.element('.logo'));
+    }
+
+    getMenuButton() {
+        return new Button (this.rootEl.element(''));
     }
 }
 
