@@ -9,17 +9,8 @@ class Footer extends WebElement {
     * Initializes links from the footer
     * @returns {Link}
     */
-    getElement(elem) {
-        switch(elem.toLowerCase()) {
-            case 'main page':
-                return new Link (this.rootEl.element('a[href="#/landingPage"]'));
-            case 'last notes':
-                return new Link (this.rootEl.element('a[href="#/main'));
-            case 'skyscanner':
-                return new Link (this.rootEl.element('a[href="http://www.skyscanner.net/"]'));
-            case 'eightydays':
-                return new Link (this.rootEl.element('a[href="eightydays.me'));
-        }
+    getElement(text) {
+        return new Link (browser.element('//a[contains(text(),"' + text + '")]')); 
     }
 
     /*
