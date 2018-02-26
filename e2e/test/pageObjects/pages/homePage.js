@@ -9,6 +9,15 @@ class HomePage extends Page {
     }
 
     /*
+    *Checks if a page is opened
+    * @returns {boolean}
+    */
+    isPageOpened() {
+        browser.element('.map-page').waitForVisible(GLOBAL_TIMEOUT);
+        return browser.element('.map-page').isVisible();
+    }
+
+    /*
     *Initializes Get Started Button on the home page
     *@returns {Button}
     */

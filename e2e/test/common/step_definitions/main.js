@@ -25,7 +25,7 @@ defineSupportCode((cucumber) => {
         return expect(countNotes).to.equal(valueToCompare);
     });
 
-    cucumber.When(/^I click on the random note item and store its title$/, () => {
+    cucumber.When(/^I click on a random note item and store its title$/, () => {
         let notes = pages.atMainPage().getNotesGrid().getNotes();
         let randomValue = Math.floor(Math.random() * (notes.value.length - 1));
 

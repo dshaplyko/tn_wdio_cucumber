@@ -19,8 +19,8 @@ Scenario: 3. Logging in with incorrect credentials
   When I enter "test@test.ru" in username field
     And I enter "12345" in password field
     And I click Login button on the login page
-  Then Error message should be displayed
-    And Text of error message should be "Incorrect username or password."
+  Then Alert message should be displayed
+    And Text of the alert message should be "Incorrect username or password."
  # When I click OK button in modal
 
 Scenario: 4. Clicking on Register link

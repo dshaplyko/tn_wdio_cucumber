@@ -11,4 +11,8 @@ defineSupportCode((cucumber) => {
         return expect(pages.atBasePage().getSideMenu().getElement(element).isVisible()).to.equal(condition === 'is');
     });
 
+    cucumber.When(/^I click '(.*)' from the Side Menu$/, (link) => {
+        return pages.atBasePage().getSideMenu().getElement(link).click();
+    });
+
 });

@@ -21,7 +21,7 @@ Scenario Outline: 1. Verifying side menu's items for non-logged in users
     | 'Main'         |
     | 'Home'         |
 
-Scenario: 1. Verifying side menu's items for logged in users
+Scenario: 2. Verifying side menu's items for logged in users
   Given I am on 'login' page
   When I enter credentials
   Then 'Main' page should be opened
@@ -34,3 +34,28 @@ Scenario: 1. Verifying side menu's items for logged in users
     And the 'Map link' is visible in the Side Menu
     And the 'Logout button' is visible in the Side Menu
     And the 'Edit profile link' is visible in the Side Menu
+
+Scenario Outline: 3. Clicking links from the Side Menu Bar
+  Given I am on 'main' page
+  When I click on on the menu button
+    And I click <link> from the Side Menu
+  Then <page> page should be opened
+
+ Examples:
+    | link             | page      |
+    | 'Main page link' | 'Home'    |
+    | 'News link'      | 'Main'    |
+    | 'Gallery link'   | 'Gallery' |
+
+Scenario: 4. Logging out of the user
+  Given I am on 'login' page
+  When I enter credentials
+  Then 'Main' page should be opened
+
+  When I click on on the menu button
+    And I click 'Logout button' from the Side Menu
+  Then Alert message should be displayed
+    And Text of the alert message should be "You've been successfully logged out."
+
+  When I click OK button in modal
+  Then the 'Logout button' is not visible in the Side Menu

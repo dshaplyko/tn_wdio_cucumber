@@ -1,4 +1,4 @@
-@Test 
+@Run 
 Feature: Footer Feature
 As a user I want to be able to view a Footer
 on every page within the application

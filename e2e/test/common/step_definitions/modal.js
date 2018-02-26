@@ -7,11 +7,11 @@ defineSupportCode((cucumber) => {
         return pages.atBasePage().getModal().getOkButton().click();
     });
 
-    cucumber.Then(/^Error message should be displayed$/, () => {
+    cucumber.Then(/^Alert message should be displayed$/, () => {
         return expect(pages.atBasePage().getModal().isErrorVisible()).to.be.true;
     });
 
-    cucumber.Then(/^Text of error message should be "([^"]+)"$/, (text) => {
+    cucumber.Then(/^Text of the alert message should be "([^"]+)"$/, (text) => {
         return expect(pages.atBasePage().getModal().getModalText()).to.equal(text);
     });
 
