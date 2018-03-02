@@ -8,3 +8,4 @@ require('../step_definitions/modal');
 require('../step_definitions/footer');
 require('../step_definitions/header');
 require('../step_definitions/sideMenu');
+require('../step_definitions/note');

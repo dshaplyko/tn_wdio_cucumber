@@ -1,5 +1,7 @@
 "use strict";
 const Page = require('./page');
+const Button = require('../webelements/buttons/button');
+const Gallery = require('../webelements/components/gallery');
 
 class NotePage extends Page {
 
@@ -18,6 +20,30 @@ class NotePage extends Page {
     */
     getTitle() {
         return browser.element('#titleInput').getText();
+    }
+
+    /*
+    *Gets a close button
+    * @returns {Button}
+    */
+    getCloseButton() {
+        return new Button (browser.element('.back-icon'));
+    }
+
+    /*
+    *Check if a map is visible on the page
+    * @returns {boolean}
+    */
+    isMapVisible() {
+        return browser.element('.map').isVisible();
+    }
+
+    isNoteTextVisible() {
+        return browser.element('.note-text').isVisible();
+    }
+
+    getGallery() {
+        return new Gallery (browser.element('.gallery-row'));
     }
     
 }

@@ -32,9 +32,5 @@ defineSupportCode((cucumber) => {
         global.stored_title = pages.atMainPage().getNotesGrid().getTitle(randomValue);
         console.log('Title is: ' + global.stored_title);
         return browser.elementIdClick(notes.value[randomValue].value.ELEMENT);
-    });
-
-    cucumber.Then(/^the title of the opened note should be equal to the stored one$/, () => {
-        return expect(pages.atNotePage().getTitle()).to.equal(global.stored_title);
-    });
+    }); 
 });
