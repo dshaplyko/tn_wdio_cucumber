@@ -1,5 +1,6 @@
 "use strict";
-const WebElement = require('../webelement')
+const WebElement = require('../webelement');
+const Button = require('../buttons/button');
 
 class NotesGrid extends WebElement {
 
@@ -33,6 +34,14 @@ class NotesGrid extends WebElement {
     */
     getTitle(index) {
         return this.rootEl.element(`.note-grid-item:nth-child(${++index}) .title`).getText();
+    }
+
+    /*
+    *Gets a Create note Button
+    * @returns {Button}
+    */
+    getCreateButton() {
+        return new Button (this.rootEl.element('.add'));
     }
 }
 

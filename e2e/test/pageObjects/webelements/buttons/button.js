@@ -10,6 +10,10 @@ class Button extends WebElement {
     click() {
         return this.rootEl.click();
     }
+
+    isButtonActive() {
+        return this.rootEl.getAttribute('tabIndex');
+    }
 }
 
 module.exports = Button;

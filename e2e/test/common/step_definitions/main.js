@@ -33,4 +33,8 @@ defineSupportCode((cucumber) => {
         console.log('Title is: ' + global.stored_title);
         return browser.elementIdClick(notes.value[randomValue].value.ELEMENT);
     }); 
+
+    cucumber.When(/^I click create note button$/, () => {
+        return pages.atMainPage().getNotesGrid().getCreateButton().click();   
+    }); 
 });

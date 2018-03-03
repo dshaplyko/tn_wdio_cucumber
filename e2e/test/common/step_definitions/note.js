@@ -6,7 +6,7 @@ defineSupportCode((cucumber) => {
     cucumber.Then(/^the '(.*)' element (is|is not) visible on the Note page$/, (item, condition) => {
         switch(item.toLowerCase()) {
             case 'map':
-                return expect(pages.atNotePage().isMapVisible()).to.equal(condition === 'is');
+                return expect(pages.atNotePage().getMap().isVisible()).to.equal(condition === 'is');
             case 'content':
                 return expect(pages.atNotePage().isNoteTextVisible()).to.equal(condition === 'is');
             case 'close button':

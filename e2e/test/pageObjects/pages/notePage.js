@@ -2,6 +2,7 @@
 const Page = require('./page');
 const Button = require('../webelements/buttons/button');
 const Gallery = require('../webelements/components/gallery');
+const Map = require('../webelements/components/map');
 
 class NotePage extends Page {
 
@@ -32,10 +33,10 @@ class NotePage extends Page {
 
     /*
     *Check if a map is visible on the page
-    * @returns {boolean}
+    * @returns {Map}
     */
-    isMapVisible() {
-        return browser.element('.map').isVisible();
+    getMap() {
+        return new Map (browser.element('.map'));
     }
 
     isNoteTextVisible() {
