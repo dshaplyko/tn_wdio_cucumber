@@ -1,5 +1,6 @@
 const { defineSupportCode } = require('cucumber');
 const pages = require('../../pageObjects/pages');
+const testData = require('../support/data');
 
 defineSupportCode((cucumber) => {
 
@@ -17,6 +18,15 @@ defineSupportCode((cucumber) => {
 
     cucumber.When(/^I click '(.*)' button to continue$/, (button) => {
         return pages.atCreateNotePage().getButton(button).click();
+    });
+
+    cucumber.When(/^I upload a photo$/, () => {
+        let image = testData['testImage'];
+        return pages.atCreateNotePage().getDropZone().uploadPhoto(image);
+    });
+
+    cucumber.When(/^I click on the map$/, () => {
+        return pages.atCreateNotePage().getMap().click();
     });
 
 });

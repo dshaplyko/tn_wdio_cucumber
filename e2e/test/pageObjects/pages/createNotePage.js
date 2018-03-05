@@ -31,6 +31,7 @@ class CreateNotePage extends Page {
     getButton(button) {
         switch(button.toLowerCase()) {
             case 'next':
+            case 'finish':
                 return new Button (browser.element('#nextButton'));
             case 'back':
                 return new Button (browser.element(''));
@@ -42,6 +43,7 @@ class CreateNotePage extends Page {
     * @returns {Map}
     */
     getMap() {
+        browser.element('.map').waitForVisible(GLOBAL_TIMEOUT);
         return new Map (browser.element('.map'));
     }
 
@@ -50,7 +52,8 @@ class CreateNotePage extends Page {
     * @returns {Drop zone}
     */
     getDropZone() {
-        return new DropZone (browser.element('.drop-zone'));
+        browser.element('.drop-zone').waitForVisible(GLOBAL_TIMEOUT);
+        return new DropZone (browser.element('.drop-zone input'));
     }
 
 }
