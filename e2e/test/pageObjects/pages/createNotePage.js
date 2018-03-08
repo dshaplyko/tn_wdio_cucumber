@@ -34,7 +34,7 @@ class CreateNotePage extends Page {
             case 'finish':
                 return new Button (browser.element('#nextButton'));
             case 'back':
-                return new Button (browser.element(''));
+                return new Button (browser.element('#backButton'));
         }
     }
 

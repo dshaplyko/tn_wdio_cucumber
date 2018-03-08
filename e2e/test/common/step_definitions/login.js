@@ -1,11 +1,16 @@
 const { defineSupportCode } = require('cucumber');
 const pages = require('../../pageObjects/pages');
+const testData = require('../support/data');
+
 
 defineSupportCode((cucumber) => {
 
     cucumber.When(/^I enter credentials$/, () => {
-        pages.atLoginPage().getForm().getElement('email field').typeIn('test@test.ru');
-        pages.atLoginPage().getForm().getElement('password field').typeIn('password');
+        let username = testData['username'];
+        let password = testData['password'];
+
+        pages.atLoginPage().getForm().getElement('email field').typeIn(username);
+        pages.atLoginPage().getForm().getElement('password field').typeIn(password);
         return pages.atLoginPage().getForm().getElement('login button').click();
     });
 
