@@ -35,7 +35,7 @@ Scenario: 2. Verifying side menu's items for logged in users
     And the 'Logout button' is visible in the Side Menu
     And the 'Edit profile link' is visible in the Side Menu
 
-Scenario Outline: 3. Clicking links from the Side Menu Bar
+Scenario Outline: 3. Clicking <link> from the Side Menu Bar
   Given I am on 'main' page
   When I click on on the menu button
     And I click <link> from the Side Menu

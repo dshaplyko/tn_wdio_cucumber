@@ -38,6 +38,7 @@ class Page {
     * @returns {Modal}
     */
     getModal() {
+        browser.element('.sweet-alert').waitForVisible(GLOBAL_TIMEOUT);
         return new Modal (browser.element('.sweet-alert'));
     }
 

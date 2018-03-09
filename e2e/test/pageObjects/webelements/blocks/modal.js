@@ -7,8 +7,11 @@ class Modal extends WebElement  {
         super(el)
     }
 
+    /*
+    * Checks is a modal windows is visible
+    * @returns {boolean}
+    */
     modalIsDisplayed() {
-        this.rootEl.waitForVisible(GLOBAL_TIMEOUT);
         return this.rootEl.isVisible();
     }
 
@@ -17,7 +20,7 @@ class Modal extends WebElement  {
     * @returns {Button}
     */
     getOkButton() { 
-        return new Button (browser.element("button.confirm")); 
+        return new Button (this.rootEl.element('button.confirm')); 
     }
 
     /*
@@ -25,13 +28,11 @@ class Modal extends WebElement  {
     * @returns text message
     */
     getModalText() {
-        return browser.element("p[style='display: block;']").getText();
+        return this.rootEl.element("p[style='display: block;']").getText();
     }
 
     isErrorVisible() {
-        let message = browser.element("p[style='display: block;']");
-        message.waitForVisible(GLOBAL_TIMEOUT);
-        return message.isVisible();
+        return this.rootEl.element("p[style='display: block;']").isVisible();
     }
 }
 
