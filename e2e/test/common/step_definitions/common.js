@@ -3,12 +3,12 @@ const pages = require('../../pageObjects/pages');
 
 defineSupportCode((cucumber) => {
 
-    cucumber.Given(/^I am on '([^"]+)' page$/, (page) => {
+    cucumber.Given(/^I am on '(.*)' page$/, (page) => {
         return pages.getPage(page).open();
     });
 
-    cucumber.When(/^I press browser's back button$/, () => {
-        return browser.back();
+    cucumber.When(/^I press browser's (back|forward) button$/, (button) => {
+        button.toLowerCase() === 'back' ? browser.back() : browser.forward();
     });
     
     cucumber.When(/^I wait for ([0-9]) seconds$/, (number) => {

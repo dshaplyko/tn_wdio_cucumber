@@ -37,4 +37,15 @@ defineSupportCode((cucumber) => {
     cucumber.When(/^I click create note button$/, () => {
         return pages.atMainPage().getNotesGrid().getCreateButton().click();   
     }); 
+
+    cucumber.When(/^I switch Only my notes toggle and count the notes$/, () => {
+        let countNotes = pages.atMainPage().getNotesGrid().getNotes().value.length;
+        global.stored_count = countNotes;
+        return pages.atMainPage().getToggle().click();   
+    });
+
+    cucumber.When(/^the count of notes is less than before$/, () => {
+        let countMyNotes = pages.atMainPage().getNotesGrid().getNotes().value.length;
+        expect(countMyNotes).to.be.below(global.stored_count);
+    });
 });

@@ -26,3 +26,12 @@ Scenario: 2. Opening a note item
    When I click on a random note item and store its title
    Then 'Note' page should be opened
     And the title of the opened note should be equal to the stored one
+
+Scenario: 3. Switching the only my notes toggle
+   Given I am on 'login' page
+   When I enter credentials
+   Then 'Main' page should be opened
+   Then the list of notes should be displayed
+
+   When I switch Only my notes toggle and count the notes
+   Then the count of notes is less than before

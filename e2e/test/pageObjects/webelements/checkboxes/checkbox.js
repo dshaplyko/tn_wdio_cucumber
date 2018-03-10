@@ -3,8 +3,7 @@ const WebElement = require('../webelement')
 
 class Checkbox extends WebElement {
 
-    clickCheckbox() {
-        this.rootEl.waitForVisible(GLOBAL_TIMEOUT);
+    click() {
         return this.rootEl.click();
     }
 }
