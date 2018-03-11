@@ -41,14 +41,5 @@ exports.config = {
         const chai = require('chai');
         chai.use(require('chai-as-promised'));
         global.expect = chai.expect;
-    },
-    onPrepare: function () {
-        console.log('Starting end2end tests');
-    },
-    onComplete: function () {
-        console.log('All done!');
-    },
-    onError: function () {
-        console.log('something wrong');
     }
 };

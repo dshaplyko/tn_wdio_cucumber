@@ -1,4 +1,4 @@
-@Test 
+@Run 
 Feature: Home Feature
 As a user I want to be able to view a home page
 
