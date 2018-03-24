@@ -2,6 +2,7 @@
 const Page = require('./page');
 const NotesGrid = require('../webelements/structures/notesGrid');
 const Checkbox = require('../webelements/checkboxes/checkbox');
+const Dropdown = require('../webelements/dropdowns/dropdown');
 const Filter = require('../webelements/components/filter');
 
 class MainPage extends Page {
@@ -40,7 +41,17 @@ class MainPage extends Page {
     * @returns {Filter}
     */
     getFilter() {
-        return new Filter (browser.element('.filter-item'));
+        browser.element('[style="padding: 16px 0px; display: table-cell; user-select: none; width: 256px;"]').waitForVisible(GLOBAL_TIMEOUT);
+        return new Filter (browser.element('[style="padding: 16px 0px; display: table-cell; user-select: none; width: 256px;"]'));
+    }
+
+    /*
+    *Initializes dropdown for nfilter
+    * @returns {Dropdown}
+    */
+    getFilterDropdown() {
+        browser.element('.filter-item').waitForVisible(GLOBAL_TIMEOUT);
+        return new Dropdown (browser.element('.filter-item'));
     }
 }
 

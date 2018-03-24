@@ -22,7 +22,7 @@ exports.config = {
         format: ['pretty', 'json:cucumber.json'],
         colors: true,
         timeout: GLOBAL_TIMEOUT
-        //tagExpression: 'not @Run'
+        //tagExpression: '@Test'
 
         /*Use the parameter to run a test
         tagExpression: '@test' */

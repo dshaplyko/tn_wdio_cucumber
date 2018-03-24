@@ -13,6 +13,8 @@ defineSupportCode((cucumber) => {
                 return expect(pages.atNotePage().getCloseButton().isVisible()).to.equal(condition === 'is');
             case 'image gallery':
                 return expect(pages.atNotePage().getGallery().isVisible()).to.equal(condition === 'is');
+            case 'sign':
+                return expect(pages.atNotePage().isSignVisible()).to.equal(condition === 'is');
         }
     });
 

@@ -36,6 +36,7 @@ class NotesGrid extends WebElement {
         return this.rootEl.element(`.note-grid-item:nth-child(${++index}) .title`).getText();
     }
 
+
     /*
     *Gets a Create note Button
     * @returns {Button}

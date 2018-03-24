@@ -1,4 +1,4 @@
-@Run 
+@Run
 Feature: Main Feature
 As a user I want to be able to navigate and use the Main page
 
@@ -35,3 +35,22 @@ Scenario: 3. Switching the only my notes toggle
 
    When I switch Only my notes toggle and count the notes
    Then the count of notes is less than before
+
+Scenario Outline: 4. Selecting <option> from the filter dropdown
+   Given I am on 'main' page
+   Then the text of default filtering is 'Title'
+   When I expand filter dropdown
+   Then the filter menu is visible
+   And the 'Title' option is visible in the filter
+   And the 'User' option is visible in the filter
+   And the 'Date' option is visible in the filter
+
+   When I choose <option> option
+   Then the notes are sorted by 'Title'
+
+    Examples:
+    | option  | 
+    | 'User'  | 
+    | 'Title' | 
+    | 'Date'  |
+

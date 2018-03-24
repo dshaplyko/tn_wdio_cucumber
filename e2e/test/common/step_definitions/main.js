@@ -10,7 +10,7 @@ defineSupportCode((cucumber) => {
     cucumber.Then(/^the '(.*)' element (is|is not) existing on the Main page$/, (element, condition) => {
         switch(element.toLowerCase()) {
             case 'filter':
-                return expect(pages.atMainPage().getFilter().isExisting()).to.equal(condition === 'is');
+                return expect(pages.atMainPage().getFilterDropdown().isExisting()).to.equal(condition === 'is');
             case 'toggle':
                 return expect(pages.atMainPage().getToggle().isExisting()).to.equal(condition === 'is');
         }      
@@ -47,5 +47,38 @@ defineSupportCode((cucumber) => {
     cucumber.When(/^the count of notes is less than before$/, () => {
         let countMyNotes = pages.atMainPage().getNotesGrid().getNotes().value.length;
         expect(countMyNotes).to.be.below(global.stored_count);
+    });
+
+    cucumber.When(/^I expand filter dropdown$/, () => {
+        return pages.atMainPage().getFilterDropdown().expand();
+    });
+
+    cucumber.Then(/^the filter menu (is|is not) visible$/, (condition) => {
+        return expect(pages.atMainPage().getFilter().isVisible()).to.equal(condition === 'is');
+    });
+
+    cucumber.Then(/^the text of default filtering is '(.*)'$/, (text) => {
+        return expect(pages.atMainPage().getFilterDropdown().getDefaultValue()).to.equal(text)
+        
+    });
+
+    cucumber.Then(/^the '(.*)' option (is|is not) visible in the filter$/, (element, condition) => {
+        return expect(pages.atMainPage().getFilter().getElement(element).isVisible()).to.equal(condition === 'is');
+        
+    });
+
+    cucumber.When(/^I choose '(.*)' option$/, (option) => {
+        return pages.atMainPage().getFilter().getElement(option).click();
+    });
+
+    cucumber.Then(/^the notes are sorted by 'Title'$/, () => {
+        let countNotes = pages.atMainPage().getNotesGrid().getNotes().value.length;
+        let noteTitles = [];
+        for (let i = 0; i < countNotes; i++) {
+            noteTitles.push(pages.atMainPage().getNotesGrid().getTitle(i))
+        }
+
+        let sorted = noteTitles.slice().sort();
+        return expect(noteTitles.join(',')).to.equal(sorted.join(','));   
     });
 });

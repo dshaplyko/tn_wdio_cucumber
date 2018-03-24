@@ -10,6 +10,7 @@ Scenario: 1. Verifying items on Note page
     And the 'Content' element is visible on the Note page
     And the 'Close button' element is visible on the Note page
     And the 'Image gallery' element is visible on the Note page
+    And the 'Sign' element is visible on the Note page
 
 Scenario: 2. Clicking the Close button on the Note page 
    Given I am on 'main' page

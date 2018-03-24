@@ -46,6 +46,10 @@ class NotePage extends Page {
     getGallery() {
         return new Gallery (browser.element('.gallery-row'));
     }
+
+    isSignVisible() {
+        return browser.element('.sign').isVisible();
+    }
     
 }
 
