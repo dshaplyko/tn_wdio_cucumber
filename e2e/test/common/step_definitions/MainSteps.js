@@ -74,6 +74,7 @@ defineSupportCode((cucumber) => {
     cucumber.Then(/^the notes are sorted by 'Title'$/, () => {
         let countNotes = pages.atMainPage().getNotesGrid().getNotes().value.length;
         let noteTitles = [];
+        
         for (let i = 0; i < countNotes; i++) {
             noteTitles.push(pages.atMainPage().getNotesGrid().getTitle(i))
         }

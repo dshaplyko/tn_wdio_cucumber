@@ -45,7 +45,7 @@ Scenario: 4. Verifying sorting options
     And the 'User' option is visible in the filter
     And the 'Date' option is visible in the filter
 
-Scenario: 5. Selection a sorting by 'Title'
+Scenario: 5. Selecting a sorting by 'Title'
     Given I am on 'main' page
     When I expand filter dropdown
       And I choose 'Title' option
