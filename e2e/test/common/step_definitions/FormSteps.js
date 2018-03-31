@@ -12,15 +12,6 @@ defineSupportCode((cucumber) => {
         return pages.getPage(page).getForm().getElement(element).click();
     });
 
-    cucumber.When(/^I enter credentials$/, () => {
-        let username = testData['username'];
-        let password = testData['password'];
-
-        pages.atLoginPage().getForm().getElement('email field').typeIn(username);
-        pages.atLoginPage().getForm().getElement('password field').typeIn(password);
-        return pages.atLoginPage().getForm().getElement('login button').click();
-    });
-
     cucumber.When(/^I enter "(.*)" in (.*) on the (.*) page$/, (value, field, page) => {
         return pages.getPage(page).getForm().getElement(field).typeIn(value);
     });

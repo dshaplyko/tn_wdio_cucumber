@@ -10,12 +10,10 @@ Scenario: 1. Verifying items on Main page as a visitor
     And each of note entry has 'title'
     And each of note entry has 'substitle'
 
+@Login
 Scenario: 1. Verifying items on Main page as a logged in user
-   Given I am on 'login' page
-   When I enter credentials
-   Then 'Main' page should be opened
-   Then the list of notes should be displayed
-    And the 'Filter' element is existing on the Main page
+   Given the list of notes should be displayed
+   Then the 'Filter' element is existing on the Main page
     And the 'Toggle' element is existing on the Main page
     And each of note entry has 'title'
     And each of note entry has 'substitle'
@@ -27,12 +25,9 @@ Scenario: 2. Opening a note item
    Then 'Note' page should be opened
     And the title of the opened note should be equal to the stored one
 
+@Login
 Scenario: 3. Switching the only my notes toggle
-   Given I am on 'login' page
-   When I enter credentials
-   Then 'Main' page should be opened
-   Then the list of notes should be displayed
-
+   Given the list of notes should be displayed
    When I switch Only my notes toggle and count the notes
    Then the count of notes is less than before
 

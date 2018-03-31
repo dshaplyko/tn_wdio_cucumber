@@ -12,7 +12,9 @@ Scenario: 1. Verifying items on Login page
     And Text of welcome message on the login page should be "Welcome Back"
 
 Scenario: 2. Logging to the application
-  When I enter credentials
+  When I enter "test@test.ru" in email field on the login page
+    And I enter "password" in password field on the login page
+    And I click Login button on the login page
   Then 'Main' page should be opened
     
 Scenario: 3. Logging in with incorrect credentials

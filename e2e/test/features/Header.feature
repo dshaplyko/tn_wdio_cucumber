@@ -16,11 +16,10 @@ Scenario Outline: 1. Verifying header's items for non-logged in user on the <pag
     | 'Main'         |
     | 'Home'         |
 
+@Login
 Scenario: 2. Verifying header's items for logged in user
-  Given I am on 'login' page
-  When I enter credentials
-  Then 'Main' page should be opened
-    And the 'Login' button is not visible in the header
+  Given 'Main' page should be opened
+  Then the 'Login' button is not visible in the header
     And the 'Sign up' button is not visible in the header
     And the Logo is visible in the header
 

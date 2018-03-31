@@ -21,11 +21,9 @@ Scenario Outline: 1. Verifying side menu's items for non-logged in users
     | 'Main'         |
     | 'Home'         |
 
+@Login
 Scenario: 2. Verifying side menu's items for logged in users
-  Given I am on 'login' page
-  When I enter credentials
-  Then 'Main' page should be opened
-
+  Given 'Main' page should be opened
   When I click on on the menu button
   Then the Side Menu is visible
     And the 'News link' is visible in the Side Menu
@@ -47,11 +45,9 @@ Scenario Outline: 3. Clicking <link> from the Side Menu Bar on the <page> page
     | 'News link'      | 'Main'    |
     | 'Gallery link'   | 'Gallery' |
 
-Scenario: 4. Logging out of the user
-  Given I am on 'login' page
-  When I enter credentials
-  Then 'Main' page should be opened
-
+@Login
+Scenario: 4. Logging out from the application
+  Given 'Main' page should be opened
   When I click on on the menu button
     And I click 'Logout button' from the Side Menu
   Then Alert message should be displayed
