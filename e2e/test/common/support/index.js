@@ -7,4 +7,5 @@ require('../step_definitions/FooterSteps');
 require('../step_definitions/HeaderSteps');
 require('../step_definitions/SideMenuSteps');
 require('../step_definitions/NoteSteps');
+require('../step_definitions/ProfileSteps');
 require('../step_definitions/CreateNoteSteps');

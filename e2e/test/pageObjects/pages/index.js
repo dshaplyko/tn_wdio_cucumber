@@ -7,6 +7,7 @@ const RegistrationPage = require('./registrationPage');
 const NotePage = require('./notePage');
 const GalleryPage = require('./galleryPage');
 const CreateNotePage = require('./createNotePage');
+const ProfilePage = require('./profilePage');
 
 exports.atBasePage = function() {
     return new Page();
@@ -40,6 +41,10 @@ exports.atCreateNotePage = function() {
     return new CreateNotePage();
 };
 
+exports.atProfilePage = function() {
+    return new ProfilePage();
+};
+
 
 exports.getPage = function(key){
     switch (key.toLowerCase()) {
@@ -50,6 +55,7 @@ exports.getPage = function(key){
         case 'note': return new NotePage();
         case 'gallery': return new GalleryPage();
         case 'create note': return new CreateNotePage();
+        case 'profile': return new ProfilePage();
         default: return new Page();
     }
 };

@@ -1,4 +1,3 @@
-const GLOBAL_TIMEOUT = 30e3;
 
 exports.config = {
     maxInstances: 1,
@@ -19,9 +18,9 @@ exports.config = {
             './e2e/test/common/support/hooks.js'
         ],
         format: ['pretty', 'json:cucumber.json'],
-        colors: true,
-        timeout: GLOBAL_TIMEOUT,
-        tagExpression: '@Test'
+        colors: true
+        //timeout: GLOBAL_TIMEOUT,
+        //tagExpression: '@Test'
 
         /*Use the parameter to run a test
         tagExpression: '@test' */
@@ -32,13 +31,5 @@ exports.config = {
         allure: {
             outputDir: './e2e/test/support/.reports/allure/xml'
         }
-    },
-    before: function () {
-        global.GLOBAL_TIMEOUT = GLOBAL_TIMEOUT;
-        browser.windowHandleSize({width: 1024, height: 768});
-
-        const chai = require('chai');
-        chai.use(require('chai-as-promised'));
-        global.expect = chai.expect;
     }
 };

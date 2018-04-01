@@ -20,8 +20,8 @@ Scenario Outline: 1. Verifying header's items for non-logged in user on the <pag
 Scenario: 2. Verifying header's items for logged in user
   Given 'Main' page should be opened
   Then the 'Login' button is not visible in the header
-    And the 'Sign up' button is not visible in the header
-    And the Logo is visible in the header
+  And the 'Sign up' button is not visible in the header
+  And the Logo is visible in the header
 
 Scenario Outline: 3. Clicking on the Logo from the <page> page
   Given I am on <page> page
