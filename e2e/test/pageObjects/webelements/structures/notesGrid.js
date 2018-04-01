@@ -44,6 +44,14 @@ class NotesGrid extends WebElement {
     getCreateButton() {
         return new Button (this.rootEl.element('.add'));
     }
+
+    /*
+    *Gets a Delete note Button
+    * @returns {Button}
+    */
+    getTrashButton(index) {
+        return new Button (this.rootEl.element(`.note-grid-item:nth-child(${++index}) .fa-trash`));
+    }
 }
 
 module.exports = NotesGrid;

@@ -1,6 +1,8 @@
 const { defineSupportCode } = require('cucumber');
 const pages = require('../../pageObjects/pages');
 const testData = require('../support/data');
+const Utils = require('../support/utils');
+const utils = new Utils();
 
 defineSupportCode((cucumber) => {
 
@@ -13,6 +15,11 @@ defineSupportCode((cucumber) => {
     });
 
     cucumber.When(/^I type '(.*)' into the '(.*)' field$/, (text, field) => {
+        if (text === 'random string and store it') {
+            let randomString = utils.generateString();
+            global.stored_title = randomString;
+            return pages.atCreateNotePage().getField(field).typeIn(randomString);
+        }
         return pages.atCreateNotePage().getField(field).typeIn(text);
     });
 

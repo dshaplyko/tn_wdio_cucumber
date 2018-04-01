@@ -29,3 +29,26 @@ Scenario: 1. Verifying a creation flow
 
   When I upload a photo
   Then the 'Finish' button should be active
+
+@Login @DeleteCreatedNotes
+Scenario: 2. Creation of a note
+  Given 'Main' page should be opened
+  When I click create note button
+  And I type 'random string and store it' into the 'Title' field
+  And I type 'subtitle' into the 'Subtitle' field
+  And I click 'Next' button to continue
+  And I click 'Next' button to continue
+  And I click on the map
+  And I click 'Next' button to continue
+  And I upload a photo
+  And I click 'Finish' button to continue
+  Then Alert message should be displayed
+
+  When I click OK button in modal
+  Then 'Note' page should be opened
+  And the title of the opened note should be equal to the stored one
+
+
+  # TO-DO 
+  # Create a test for creting a note (check that it is created); After the test delete the created note by using Hooks
+  # Create a test for deleting a note ; Before the tests create a note using a HOOK!

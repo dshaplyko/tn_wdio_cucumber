@@ -23,3 +23,22 @@ Before({tags: "@Login"}, function () {
     return pages.atLoginPage().getForm().getElement('login button').click();
 
 });
+
+After({tags: "@DeleteCreatedNotes"}, function () {
+
+    let deleteNotes = () => {
+        browser.url('/#login');
+        browser.url('/#main');
+        browser.waitForVisible('.notes-grid', 10000)
+        browser.waitForExist('#onlyMyButton', 10000)
+        pages.atMainPage().getToggle().click();
+        browser.waitForVisible('.note-grid-item:not(.no-result):not(.add)', 3000)
+        if (browser.element('.note-grid-item:nth-child(2) .fa-trash').isExisting()) {
+            pages.atMainPage().getNotesGrid().getTrashButton(1).click();
+            pages.atBasePage().getModal().getOkButton().click();
+            deleteNotes();
+        }
+        return true;        
+    }
+    return deleteNotes();
+});
