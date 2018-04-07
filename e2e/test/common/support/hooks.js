@@ -5,7 +5,7 @@ const GLOBAL_TIMEOUT = 30e3;
 
 Before(function () {
     global.GLOBAL_TIMEOUT = GLOBAL_TIMEOUT;
-    browser.windowHandleSize({width: 1024, height: 768});
+    browser.windowHandleSize({width: 1440, height: 900});
 
     const chai = require('chai');
     chai.use(require('chai-as-promised'));
@@ -29,11 +29,11 @@ After({tags: "@DeleteCreatedNotes"}, function () {
     let deleteNotes = () => {
         browser.url('/#login');
         browser.url('/#main');
-        browser.waitForVisible('.notes-grid', 10000)
-        browser.waitForExist('#onlyMyButton', 10000)
+        browser.waitForVisible('.notes-grid', 3000)
+        browser.waitForExist('#onlyMyButton', 3000)
         pages.atMainPage().getToggle().click();
-        browser.waitForVisible('.note-grid-item:not(.no-result):not(.add)', 3000)
-        if (browser.element('.note-grid-item:nth-child(2) .fa-trash').isExisting()) {
+        browser.waitForVisible('.note-grid-item:not(.no-result):not(.add)', 3000);
+        if (pages.atMainPage().getNotesGrid().getTrashButton(1).isExisting()) {
             pages.atMainPage().getNotesGrid().getTrashButton(1).click();
             pages.atBasePage().getModal().getOkButton().click();
             deleteNotes();

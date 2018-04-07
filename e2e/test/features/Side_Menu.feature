@@ -7,12 +7,12 @@ Scenario Outline: 1. Verifying side menu's items for non-logged in users
   Given I am on <page> page
   When I click on on the menu button
   Then the Side Menu is visible
-    And the 'News link' is visible in the Side Menu
-    And the 'Gallery link' is visible in the Side Menu
-    And the 'Main page link' is visible in the Side Menu
-    And the 'Map link' is visible in the Side Menu
-    And the 'Logout button' is not visible in the Side Menu
-    And the 'Edit profile link' is not visible in the Side Menu
+  And the 'News link' is visible in the Side Menu
+  And the 'Gallery link' is visible in the Side Menu
+  And the 'Main page link' is visible in the Side Menu
+  And the 'Map link' is visible in the Side Menu
+  And the 'Logout button' is not visible in the Side Menu
+  And the 'Edit profile link' is not visible in the Side Menu
   
     Examples:
     | page           | 
@@ -26,12 +26,12 @@ Scenario: 2. Verifying side menu's items for logged in users
   Given 'Main' page should be opened
   When I click on on the menu button
   Then the Side Menu is visible
-    And the 'News link' is visible in the Side Menu
-    And the 'Gallery link' is visible in the Side Menu
-    And the 'Main page link' is visible in the Side Menu
-    And the 'Map link' is visible in the Side Menu
-    And the 'Logout button' is visible in the Side Menu
-    And the 'Edit profile link' is visible in the Side Menu
+  And the 'News link' is visible in the Side Menu
+  And the 'Gallery link' is visible in the Side Menu
+  And the 'Main page link' is visible in the Side Menu
+  And the 'Map link' is visible in the Side Menu
+  And the 'Logout button' is visible in the Side Menu
+  And the 'Edit profile link' is visible in the Side Menu
 
 Scenario Outline: 3. Clicking <link> from the Side Menu Bar on the <page> page
   Given I am on 'main' page
@@ -49,9 +49,9 @@ Scenario Outline: 3. Clicking <link> from the Side Menu Bar on the <page> page
 Scenario: 4. Logging out from the application
   Given 'Main' page should be opened
   When I click on on the menu button
-    And I click 'Logout button' from the Side Menu
+  And I click 'Logout button' from the Side Menu
   Then Alert message should be displayed
-    And Text of the alert message should be "You've been successfully logged out."
+  And Text of the alert message should be "You've been successfully logged out."
 
   When I click OK button in modal
   Then the 'Logout button' is not visible in the Side Menu

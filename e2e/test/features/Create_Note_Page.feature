@@ -8,14 +8,14 @@ Scenario: 1. Verifying a creation flow
 
   When I click create note button
   Then 'Create note' page should be opened
-    And the 'Next' button should be inactive
+  And the 'Next' button should be inactive
 
   When I type 'new note test' into the 'Title' field
-    And I type 'new note test' into the 'Subtitle' field
+  And I type 'new note test' into the 'Subtitle' field
   Then the 'Next' button should be active
 
   When I click 'Next' button to continue
-    And I type 'new note test' into the 'Content' field
+  And I type 'new note test' into the 'Content' field
   Then the 'Next' button should be active
 
   When I click 'Next' button to continue
@@ -30,7 +30,7 @@ Scenario: 1. Verifying a creation flow
   When I upload a photo
   Then the 'Finish' button should be active
 
-@Login @DeleteCreatedNotes
+@Test @Login @DeleteCreatedNotes
 Scenario: 2. Creation of a note
   Given 'Main' page should be opened
   When I click create note button
@@ -50,5 +50,4 @@ Scenario: 2. Creation of a note
 
 
   # TO-DO 
-  # Create a test for creting a note (check that it is created); After the test delete the created note by using Hooks
   # Create a test for deleting a note ; Before the tests create a note using a HOOK!
