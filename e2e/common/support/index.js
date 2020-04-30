@@ -1,0 +1,12 @@
+require('../step_definitions/CommonSteps');
+require('../step_definitions/MainSteps');
+require('../step_definitions/HomeSteps');
+require('../step_definitions/FormSteps');
+require('../step_definitions/ModalSteps');
+require('../step_definitions/FooterSteps');
+require('../step_definitions/HeaderSteps');
+require('../step_definitions/SideMenuSteps');
+require('../step_definitions/NoteSteps');
+require('../step_definitions/ProfileSteps');
+require('../step_definitions/CreateNoteSteps');
+require('./hooks');

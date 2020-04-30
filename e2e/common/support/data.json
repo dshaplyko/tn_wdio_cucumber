@@ -1,0 +1,5 @@
+{
+  "testImage": "./e2e/common/support/test.png",
+  "username": "test@mail.com",
+  "password": "password"
+}

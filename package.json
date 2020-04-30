@@ -1,27 +1,27 @@
 {
-  "name": "test",
-  "version": "1.0.0",
-  "description": "My Test Project",
-  "main": "app.js",
+  "name": "travel-notes",
+  "version": "2.0.0",
+  "description": "Test Framework for Travel Notes",
+  "main": "index.js",
   "scripts": {
-    "selenium-server": "node node_modules/selenium-standalone/bin/selenium-standalone start",
-    "e2e-setup": "node node_modules/selenium-standalone/bin/selenium-standalone install",
-    "e2e": "./node_modules/.bin/wdio ./wdio.conf.js",
-    "report": "allure serve ./e2e/test/support/.reports/allure/xml/"
+    "test": "./node_modules/.bin/wdio ./wdio.conf.js",
+    "e2e": "npx wdio wdio.conf.js"
   },
   "devDependencies": {
-    "allure-commandline": "2.3.5",
-    "chai": "^4.1.2",
-    "chai-as-promised": "^7.1.1",
-    "cucumber": "3.0.1",
-    "wdio": "1.0.3",
-    "wdio-allure-reporter": "0.1.2",
-    "wdio-cucumber-reporter": "0.0.2",
-    "wdio-mocha-framework": "0.5.8",
-    "wdio-screenshot": "0.5.2",
-    "wdio-spec-reporter": "0.0.5",
-    "webdriverio": "4.12.0"
+    "@babel/core": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "@wdio/cli": "^6.1.5",
+    "@wdio/cucumber-framework": "^6.1.6",
+    "@wdio/local-runner": "^6.1.6",
+    "@wdio/mocha-framework": "^6.1.6",
+    "@wdio/selenium-standalone-service": "^6.0.16",
+    "@wdio/spec-reporter": "^6.1.5",
+    "@wdio/sync": "^6.1.5",
+    "babel": "^6.23.0",
+    "chai": "^4.2.0",
+    "chromedriver": "^81.0.0",
+    "wdio-chromedriver-service": "^6.0.2"
   },
-  "author": "DS",
+  "author": "dmitryshaplyko@gmail.com",
   "license": "ISC"
 }
