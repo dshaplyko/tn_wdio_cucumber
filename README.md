@@ -1,6 +1,8 @@
 # travel-notes
 
-Test Automation Frameworkr for Travel Notes app: https://t-notes.herokuapp.com/.
+Test Automation Framework for Travel Notes app: https://t-notes.herokuapp.com/
+
+## Travel-notes repo
 https://github.com/scolt/travel-notes
 
 ## Requirements
