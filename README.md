@@ -1,7 +1,21 @@
-# Test automation framework for Travel Notes
+# travel-notes
 
-1. npm install
-2. webdriver-manager update
-3. webdriver-manager start
-4. npm run e2e
-5. npm run report
+Test Automation Frameworkr for Travel Notes app: https://t-notes.herokuapp.com/.
+https://github.com/scolt/travel-notes
+
+## Requirements
+
+* Git
+* NodeJS 8 or higher (10 is preffered)
+
+## Setup
+
+```
+$> git clone https://github.com/dshaplyko/tn_wdio_cucumber.git
+$> npm install
+```
+## Running tests
+
+```
+$> npm run e2e
+```
