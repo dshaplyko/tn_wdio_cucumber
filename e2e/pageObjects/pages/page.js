@@ -12,7 +12,7 @@ class Page {
 		/*
 		Dirty hack. Need to re-write it
 		*/
-		browser.reloadSession()
+		//browser.reloadSession();
 		browser.url('/#' + path);
 	}
 

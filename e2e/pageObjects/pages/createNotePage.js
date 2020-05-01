@@ -51,7 +51,7 @@ class CreateNotePage extends Page {
 	 */
 	getDropZone() {
 		browser.$('.drop-zone').waitForExist(GLOBAL_TIMEOUT);
-		return new DropZone(browser.$('.drop-zone input'));
+		return new DropZone(browser.$('.drop-zone'));
 	}
 
 }

@@ -1,7 +1,7 @@
 exports.config = {
 	runner: 'local',
 	specs: [
-		'./e2e/features/Home_Page.feature'
+		'./e2e/features/*.feature'
 	],
 	exclude: [
 		// 'path/to/excluded/files'
@@ -99,6 +99,7 @@ exports.config = {
 			// works since version 1.1 of the wdio-cucumber-framework
 			// './src/**/*.js',
 		],
+		tagExpression: ''
 	},
 	//
 	// =====

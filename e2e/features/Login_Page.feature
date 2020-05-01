@@ -17,6 +17,7 @@ Scenario: 2. Logging to the application
   And I click Login button on the login page
   Then 'Main' page should be opened
     
+@Modal
 Scenario: 3. Logging in with incorrect credentials
   When I enter "test@test.ru" in email field on the login page
   And I enter "12345" in password field on the login page

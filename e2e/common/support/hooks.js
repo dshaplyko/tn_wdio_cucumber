@@ -11,9 +11,21 @@ Before(() => {
 });
 
 Before({tags: "@Login"}, () => {
-	return utils.login();
+	let loginStatus = utils.getLoginStatus();
+	
+	if(!loginStatus) {
+		return utils.login();
+	}
 });
 
 After({tags: "@DeleteCreatedNotes"}, () => {
 	return utils.deleteNotes();
+});
+
+After({tags: "@ClearSession"}, () => {
+	return browser.reloadSession();
+});
+
+After({tags: "@Modal"}, () => {
+	return utils.closeModal();
 });

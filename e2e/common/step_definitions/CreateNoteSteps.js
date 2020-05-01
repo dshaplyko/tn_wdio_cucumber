@@ -1,11 +1,10 @@
+const path = require('path');
 const {
 	When,
 	Then
 } = require('cucumber');
 const pages = require('../../pageObjects/pages');
-const testData = require('../support/data');
 const utils = require('../support/utils');
-
 
 Then(/^the '(.*)' button should be (inactive|active)$/, (button, condition) => {
 
@@ -29,8 +28,9 @@ When(/^I click '(.*)' button to continue$/, (button) => {
 });
 
 When(/^I upload a photo$/, () => {
-	let image = testData.testImage;
-	return pages.atCreateNotePage().getDropZone().uploadPhoto(image);
+	const filePath = path.join(__dirname, '../support/test.png');
+	//let remoteFilePath = browser.uploadFile(filePath);
+	return pages.atCreateNotePage().getDropZone().setValue(filePath);
 });
 
 When(/^I click on the map$/, () => {
