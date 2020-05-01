@@ -1,7 +1,7 @@
 const pages = require('../../pageObjects/pages');
 const testData = require('./data');
 
-const generateSring = number => {
+const generateString = number => {
 
   let text = "";
   let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -52,7 +52,7 @@ const closeModal = () => {
 };
 
 module.exports = {
-  generateSring,
+  generateString,
   deleteNotes,
   login,
   closeModal,

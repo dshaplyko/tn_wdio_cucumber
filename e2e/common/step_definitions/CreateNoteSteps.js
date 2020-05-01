@@ -5,6 +5,7 @@ const {
 } = require('cucumber');
 const pages = require('../../pageObjects/pages');
 const utils = require('../support/utils');
+const testData = require('../support/data.json');
 
 Then(/^the '(.*)' button should be (inactive|active)$/, (button, condition) => {
 
@@ -28,8 +29,7 @@ When(/^I click '(.*)' button to continue$/, (button) => {
 });
 
 When(/^I upload a photo$/, () => {
-	const filePath = path.join(__dirname, '../support/test.png');
-	//let remoteFilePath = browser.uploadFile(filePath);
+	const filePath = path.join(__dirname, testData.testImage);
 	return pages.atCreateNotePage().getDropZone().setValue(filePath);
 });
 

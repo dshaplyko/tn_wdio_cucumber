@@ -4,7 +4,7 @@ As a user I want to be able to create a note item
 
 @Login
 Scenario: 1. Verifying a creation flow
-  Given 'Main' page should be opened
+  Given I am on 'Main' page
 
   When I click create note button
   Then 'Create note' page should be opened
@@ -32,7 +32,7 @@ Scenario: 1. Verifying a creation flow
 
 @Login @DeleteCreatedNotes
 Scenario: 2. Creation of a note
-  Given 'Main' page should be opened
+  Given I am on 'Main' page
   When I click create note button
   And I type 'random string and store it' into the 'Title' field
   And I type 'subtitle' into the 'Subtitle' field

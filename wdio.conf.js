@@ -1,7 +1,7 @@
 exports.config = {
 	runner: 'local',
 	specs: [
-		'./e2e/features/*.feature'
+		'./e2e/features/Create_Note_Page.feature'
 	],
 	exclude: [
 		// 'path/to/excluded/files'

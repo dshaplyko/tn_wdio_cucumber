@@ -7,7 +7,12 @@ class DropZone extends WebElement {
 	}
 
 	setValue(value) {
-		browser.pause(3000);
+		
+		browser.execute(
+			el => el.style.display = 'block',
+			this.rootEl
+		);
+		this.rootEl.waitForDisplayed();
 		return this.rootEl.setValue(value);
 	}
 
