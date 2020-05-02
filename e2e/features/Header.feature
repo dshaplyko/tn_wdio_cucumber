@@ -16,7 +16,7 @@ Scenario Outline: 1. Verifying header's items for non-logged in user on the <pag
     | 'Main'         |
     | 'Home'         |
 
-@Test @Login 
+@Login 
 Scenario: 2. Verifying header's items for logged in user
   Given 'Main' page should be opened
   Then the 'Login' button is not visible in the header
@@ -25,7 +25,7 @@ Scenario: 2. Verifying header's items for logged in user
 
 Scenario Outline: 3. Clicking on the Logo from the <page> page
   Given I am on <page> page
-  When I click on on the Logo
+  When I click on the Logo
   Then 'Main' page should be opened
 
     Examples:

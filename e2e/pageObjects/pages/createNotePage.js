@@ -41,7 +41,7 @@ class CreateNotePage extends Page {
 	 * @returns {Map}
 	 */
 	getMap() {
-		browser.$('.map').waitForExist(GLOBAL_TIMEOUT);
+		browser.$('.map').waitForDisplayed({timeout: 3000});
 		return new Map(browser.$('.map'));
 	}
 
@@ -50,7 +50,7 @@ class CreateNotePage extends Page {
 	 * @returns {Drop zone}
 	 */
 	getDropZone() {
-		browser.$('.drop-zone').waitForExist(GLOBAL_TIMEOUT);
+		browser.$('.drop-zone').waitForDisplayed({timeout: GLOBAL_TIMEOUT});
 		return new DropZone(browser.$('.drop-zone input'));
 	}
 

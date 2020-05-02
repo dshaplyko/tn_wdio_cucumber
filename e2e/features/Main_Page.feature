@@ -1,4 +1,4 @@
-@Run
+@Wip
 Feature: Main Feature
 As a user I want to be able to navigate and use the Main page
 

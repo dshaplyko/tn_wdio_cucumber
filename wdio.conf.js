@@ -1,13 +1,13 @@
 exports.config = {
 	runner: 'local',
 	specs: [
-		'./e2e/features/Footer.feature'
+		'./e2e/features/*.feature'
 	],
 	exclude: [
 		// 'path/to/excluded/files'
 	],
 	//
-	maxInstances: 1,
+	maxInstances: 10,
 	capabilities: [{
 		// maxInstances can get overwritten per capability. So if you have an in-house Selenium
 		// grid with only 5 firefox instances available you can make sure that not more than
@@ -61,7 +61,7 @@ exports.config = {
 	connectionRetryTimeout: 120000,
 	//
 	// Default request retries count
-	connectionRetryCount: 3,
+	connectionRetryCount: 1,
 	//
 	// Test runner services
 	// Services take over a specific job you don't want to take care of. They enhance
@@ -99,7 +99,7 @@ exports.config = {
 			// works since version 1.1 of the wdio-cucumber-framework
 			// './src/**/*.js',
 		],
-		tagExpression: ''
+		tagExpression: 'not @Wip'
 	},
 	//
 	// =====

@@ -11,11 +11,11 @@ Before(() => {
 });
 
 Before({tags: "@Login"}, () => {
-	let loginStatus = utils.getLoginStatus();
+	//let loginStatus = utils.getLoginStatus();
 	
-	if(!loginStatus) {
+	//if(!loginStatus) {
 		return utils.login();
-	}
+	//}
 });
 
 After({tags: "@DeleteCreatedNotes"}, () => {

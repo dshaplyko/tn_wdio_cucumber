@@ -37,7 +37,7 @@ class Page {
 	 * @returns {Modal}
 	 */
 	getModal() {
-		browser.$('.sweet-alert').waitForExist(GLOBAL_TIMEOUT);
+		browser.pause(2000);
 		return new Modal(browser.$('.sweet-alert'));
 	}
 

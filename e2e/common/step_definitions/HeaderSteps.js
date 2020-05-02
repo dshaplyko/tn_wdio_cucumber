@@ -17,10 +17,10 @@ Then(/^the Logo is visible in the header$/, () => {
 	return expect(pages.atBasePage().getHeader().getLogo().isDisplayed()).to.equal(true);
 });
 
-When(/^I click on on the Logo$/, () => {
+When(/^I click on the Logo$/, () => {
 	return pages.atBasePage().getHeader().getLogo().click();
 });
 
-When(/^I click on on the menu button$/, () => {
+When(/^I click on the menu button$/, () => {
 	return pages.atBasePage().getHeader().getMenuButton().click();
 });
