@@ -1,6 +1,4 @@
 const {
-	Given,
-	When,
 	Then
 } = require('cucumber');
 const pages = require('../../po/pages');

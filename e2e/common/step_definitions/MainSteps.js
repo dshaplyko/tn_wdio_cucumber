@@ -2,7 +2,7 @@ const {
 	When,
 	Then
 } = require('cucumber');
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 
 Then(/^the list of notes should be displayed$/, () => {
 	return expect(pages.atMainPage().getNotesGrid().isDisplayed()).to.equal(true);
