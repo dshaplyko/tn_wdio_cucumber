@@ -9,9 +9,9 @@ When(/^I click OK button in modal$/, () => {
 });
 
 Then(/^Alert message should be displayed$/, () => {
-	return expect(pages.atBasePage().getModal().isErrorVisible()).to.be.true;
+	return expect(pages.atBasePage().getModal().getMessage().isDisplayed()).to.be.true;
 });
 
-Then(/^Text of the alert message should be "([^"]+)"$/, (text) => {
-	return expect(pages.atBasePage().getModal().getModalText()).to.equal(text);
+Then(/^Text of the alert message should be "([^"]+)"$/, text => {
+	return expect(pages.atBasePage().getModal().getMessage().getText()).to.equal(text);
 });

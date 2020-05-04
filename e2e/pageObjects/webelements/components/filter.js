@@ -1,6 +1,6 @@
-const WebElement = require('../webelement');
+const PageComponent = require('../PageComponent');
 
-class Filter extends WebElement {
+class Filter extends PageComponent {
 
 	getElement(elem) {
 		switch (elem.toLowerCase()) {

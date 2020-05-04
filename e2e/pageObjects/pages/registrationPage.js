@@ -1,5 +1,5 @@
 const Page = require('./page');
-const Form = require('../webelements/forms/form');
+const Form = require('../webelements/components/form');
 class RegistrationPage extends Page {
 
 	open() {
@@ -15,7 +15,7 @@ class RegistrationPage extends Page {
 	}
 
 	getForm() {
-		browser.$('.login-form').waitForExist(GLOBAL_TIMEOUT);
+		browser.$('.login-form').waitForExist({timeout: GLOBAL_TIMEOUT});
 		return new Form(browser.$('.login-form'));
 	}
 

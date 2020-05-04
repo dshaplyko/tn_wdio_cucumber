@@ -51,7 +51,7 @@ When(/^the count of notes is less than before$/, () => {
 });
 
 When(/^I expand filter dropdown$/, () => {
-	return pages.atMainPage().getFilterDropdown().expand();
+	return pages.atMainPage().getFilterDropdown().click();
 });
 
 Then(/^the filter menu (is|is not) visible$/, (condition) => {

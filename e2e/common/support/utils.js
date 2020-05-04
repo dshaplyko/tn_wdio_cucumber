@@ -40,8 +40,8 @@ const login = () => {
   
   setLoginStatus(false);
   pages.getPage('Login').open();
-  pages.atLoginPage().getForm().getElement('email field').typeIn(testData.username);
-  pages.atLoginPage().getForm().getElement('password field').typeIn(testData.password);
+  pages.atLoginPage().getForm().getElement('email field').type(testData.username);
+  pages.atLoginPage().getForm().getElement('password field').type(testData.password);
   pages.atLoginPage().getForm().getElement('login button').click();
   return setLoginStatus(true);
 

@@ -1,7 +1,6 @@
 const Page = require('./page');
-const Button = require('../webelements/buttons/button');
+const PageElement = require('../webelements/PageElement');
 const Gallery = require('../webelements/components/gallery');
-const Map = require('../webelements/components/map');
 
 class NotePage extends Page {
 
@@ -10,7 +9,7 @@ class NotePage extends Page {
 	 * @returns {boolean}
 	 */
 	isPageOpened() {
-		browser.$('.note-background').waitForExist(GLOBAL_TIMEOUT);
+		browser.$('.note-background').waitForExist({timeout: GLOBAL_TIMEOUT});
 		return browser.$('.note-background').isDisplayed();
 	}
 
@@ -27,7 +26,7 @@ class NotePage extends Page {
 	 * @returns {Button}
 	 */
 	getCloseButton() {
-		return new Button(browser.$('.back-icon'));
+		return new PageElement(browser.$('.back-icon'));
 	}
 
 	/*
@@ -35,7 +34,7 @@ class NotePage extends Page {
 	 * @returns {Map}
 	 */
 	getMap() {
-		return new Map(browser.$('.map'));
+		return new PageElement(browser.$('.map'));
 	}
 
 	isNoteTextVisible() {

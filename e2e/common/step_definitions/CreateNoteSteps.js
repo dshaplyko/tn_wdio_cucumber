@@ -19,9 +19,9 @@ When(/^I type '(.*)' into the '(.*)' field$/, (text, field) => {
 	if (text === 'random string and store it') {
 		let randomString = utils.generateString(6);
 		global.stored_title = randomString;
-		return pages.atCreateNotePage().getField(field).typeIn(randomString);
+		return pages.atCreateNotePage().getField(field).type(randomString);
 	}
-	return pages.atCreateNotePage().getField(field).typeIn(text);
+	return pages.atCreateNotePage().getField(field).type(text);
 });
 
 When(/^I click '(.*)' button to continue$/, (button) => {

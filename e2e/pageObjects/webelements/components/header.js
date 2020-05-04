@@ -1,15 +1,14 @@
-const WebElement = require('../webelement');
-const Button = require('../buttons/button');
-const Link = require('../links/link');
+const PageComponent = require('../PageComponent');
+const PageElement = require('../PageElement');
 
-class Header extends WebElement {
+class Header extends PageComponent {
 
 	/*
 	 * Initiates Login button in the Header
 	 * @returns {Button}
 	 */
 	getLoginButton() {
-		return new Button(this.rootEl.$('#loginMenuButton'));
+		return new PageElement(this.rootEl.$('#loginMenuButton'));
 	}
 
 	/*
@@ -17,7 +16,7 @@ class Header extends WebElement {
 	 * @returns {Button}
 	 */
 	getSignUp() {
-		return new Button(this.rootEl.$('#registerMenuButton'));
+		return new PageElement(this.rootEl.$('#registerMenuButton'));
 	}
 
 	/*
@@ -25,7 +24,7 @@ class Header extends WebElement {
 	 * @returns {Link}
 	 */
 	getLogo() {
-		return new Link(this.rootEl.$('.logo'));
+		return new PageElement(this.rootEl.$('.logo'));
 	}
 
 	/*
@@ -33,7 +32,7 @@ class Header extends WebElement {
 	 * @returns {Button}
 	 */
 	getMenuButton() {
-		return new Button(this.rootEl.$('span.menu-button'));
+		return new PageElement(this.rootEl.$('span.menu-button'));
 	}
 }
 

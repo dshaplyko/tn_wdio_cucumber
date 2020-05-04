@@ -1,6 +1,6 @@
-const WebElement = require('../webelement');
+const PageComponent = require('../PageComponent');
 
-class DropZone extends WebElement {
+class DropZone extends PageComponent {
 
 	uploadPhoto(image) {
 		return this.rootEl.uploadFile(image);

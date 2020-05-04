@@ -1,7 +1,7 @@
-const Header = require('../webelements/blocks/header');
-const Footer = require('../webelements/blocks/footer');
-const Modal = require('../webelements/blocks/modal');
-const SideMenu = require('../webelements/blocks/sideMenu');
+const Header = require('../webelements/components/header');
+const Footer = require('../webelements/components/footer');
+const Modal = require('../webelements/components/modal');
+const SideMenu = require('../webelements/components/sideMenu');
 
 class Page {
 	constructor() {
@@ -46,7 +46,7 @@ class Page {
 	 * @returns {SideMenu}
 	 */
 	getSideMenu() {
-		browser.$('//span[@id="newsMenuItem"]/../../..').waitForExist(GLOBAL_TIMEOUT);
+		browser.$('//span[@id="newsMenuItem"]/../../..').waitForExist({timeout: GLOBAL_TIMEOUT});
 		return new SideMenu(browser.$('//span[@id="newsMenuItem"]/../../..'));
 	}
 }

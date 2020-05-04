@@ -1,7 +1,7 @@
 const Page = require('./page');
-const NotesGrid = require('../webelements/structures/notesGrid');
-const Checkbox = require('../webelements/checkboxes/checkbox');
-const Dropdown = require('../webelements/dropdowns/dropdown');
+const NotesGrid = require('../webelements/components/notesGrid');
+const PageElement = require('../webelements/PageElement');
+const Dropdown = require('../webelements/components/dropdown');
 const Filter = require('../webelements/components/filter');
 
 class MainPage extends Page {
@@ -23,16 +23,16 @@ class MainPage extends Page {
 	 * @returns {Element}
 	 */
 	getNotesGrid() {
-		browser.$('.notes-grid').waitForExist(GLOBAL_TIMEOUT);
+		browser.$('.notes-grid').waitForExist({timeout: GLOBAL_TIMEOUT});
 		return new NotesGrid(browser.$('.notes-grid'));
 	}
 
 	/*
 	 *Initializes toggle for all/my notes
-	 * @returns {Checkbox}
+	 * @returns {PageElement}
 	 */
 	getToggle() {
-		return new Checkbox(browser.$('#onlyMyButton'));
+		return new PageElement(browser.$('#onlyMyButton'));
 	}
 
 	/*
@@ -40,7 +40,7 @@ class MainPage extends Page {
 	 * @returns {Filter}
 	 */
 	getFilter() {
-		browser.$('[style="padding: 16px 0px; display: table-cell; user-select: none; width: 256px;"]').waitForExist(GLOBAL_TIMEOUT);
+		browser.$('[style="padding: 16px 0px; display: table-cell; user-select: none; width: 256px;"]').waitForExist({timeout: GLOBAL_TIMEOUT});
 		return new Filter(browser.$('[style="padding: 16px 0px; display: table-cell; user-select: none; width: 256px;"]'));
 	}
 
@@ -49,7 +49,7 @@ class MainPage extends Page {
 	 * @returns {Dropdown}
 	 */
 	getFilterDropdown() {
-		browser.$('.filter-item').waitForExist(GLOBAL_TIMEOUT);
+		browser.$('.filter-item').waitForExist({timeout: GLOBAL_TIMEOUT});
 		return new Dropdown(browser.$('.filter-item'));
 	}
 }

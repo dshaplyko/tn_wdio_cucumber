@@ -1,10 +1,6 @@
-const WebElement = require('../webelement');
+const PageComponent = require('../PageComponent');
 
-class Dropdown extends WebElement {
-
-	expand() {
-		return this.rootEl.click();
-	}
+class Dropdown extends PageComponent {
 
 	getDefaultValue() {
 		return this.rootEl.$('.filter-item div > div > div:nth-child(2)').getText();

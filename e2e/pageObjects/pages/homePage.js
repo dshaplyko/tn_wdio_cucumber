@@ -1,5 +1,5 @@
 const Page = require('./page');
-const Button = require('../webelements/buttons/button');
+const PageElement = require('../webelements/PageElement');
 
 class HomePage extends Page {
 
@@ -12,7 +12,7 @@ class HomePage extends Page {
 	 * @returns {boolean}
 	 */
 	isPageOpened() {
-		browser.$('.map-page').waitForExist(GLOBAL_TIMEOUT);
+		browser.$('.map-page').waitForExist({timeout: GLOBAL_TIMEOUT});
 		return browser.$('.map-page').isDisplayed();
 	}
 
@@ -21,7 +21,7 @@ class HomePage extends Page {
 	 *@returns {Button}
 	 */
 	getStartedButton() {
-		return new Button(browser.$('#getStarted'));
+		return new PageElement(browser.$('#getStarted'));
 	}
 }
 

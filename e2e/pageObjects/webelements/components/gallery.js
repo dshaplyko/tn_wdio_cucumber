@@ -1,6 +1,6 @@
-const WebElement = require('../webelement');
+const PageComponent = require('../PageComponent');
 
-class Gallery extends WebElement {
+class Gallery extends PageComponent {
 
 }
 

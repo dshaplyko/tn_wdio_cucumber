@@ -1,14 +1,14 @@
-const WebElement = require('../webelement');
-const Button = require('../buttons/button');
+const PageComponent = require('../PageComponent');
+const PageElement = require('../PageElement');
 
-class NotesGrid extends WebElement {
+class NotesGrid extends PageComponent {
 
 	/*
 	 *Gets the note
 	 * @returns {object}
 	 */
 	getNotes() {
-		return this.rootEl.$s('.note-grid-item:not(.add)');
+		return this.rootEl.$('.note-grid-item:not(.add)');
 	}
 
 	/*
@@ -16,7 +16,7 @@ class NotesGrid extends WebElement {
 	 * @returns {object}
 	 */
 	getNoteTitles() {
-		return this.rootEl.$s('.note-grid-item .title');
+		return this.rootEl.$('.note-grid-item .title');
 	}
 
 	/*
@@ -24,7 +24,7 @@ class NotesGrid extends WebElement {
 	 * @returns {object}
 	 */
 	getNoteSubTitles() {
-		return this.rootEl.$s('.note-grid-item .subtitle');
+		return this.rootEl.$('.note-grid-item .subtitle');
 	}
 
 	/*
@@ -41,7 +41,7 @@ class NotesGrid extends WebElement {
 	 * @returns {Button}
 	 */
 	getCreateButton() {
-		return new Button(this.rootEl.$('.add'));
+		return new PageElement(this.rootEl.$('.add'));
 	}
 
 	/*
@@ -49,7 +49,7 @@ class NotesGrid extends WebElement {
 	 * @returns {Button}
 	 */
 	getTrashButton(index) {
-		return new Button(this.rootEl.$(`.note-grid-item:nth-child(${++index}) .fa-trash`));
+		return new PageElement(this.rootEl.$(`.note-grid-item:nth-child(${++index}) .fa-trash`));
 	}
 }
 

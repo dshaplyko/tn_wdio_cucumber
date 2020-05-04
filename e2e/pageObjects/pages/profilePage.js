@@ -6,7 +6,7 @@ class ProfilePage extends Page {
 	 * @returns {boolean}
 	 */
 	isPageOpened() {
-		browser.$('.header-profile').waitForExist(GLOBAL_TIMEOUT);
+		browser.$('.header-profile').waitForExist({timeout: GLOBAL_TIMEOUT});
 		return browser.$('.header-profile').isDisplayed();
 	}
 

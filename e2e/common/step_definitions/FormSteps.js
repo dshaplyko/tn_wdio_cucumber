@@ -13,7 +13,7 @@ When(/^I click (.*) on the (.*) page$/, (element, page) => {
 });
 
 When(/^I enter "(.*)" in (.*) on the (.*) page$/, (value, field, page) => {
-	return pages.getPage(page).getForm().getElement(field).typeIn(value);
+	return pages.getPage(page).getForm().getElement(field).type(value);
 });
 
 Then(/^Text of welcome message on the (.*) page should be "([^"]+)"$/, (page, text) => {
