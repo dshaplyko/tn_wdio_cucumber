@@ -2,7 +2,7 @@ const {
 	When,
 	Then
 } = require('cucumber');
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 
 Then(/^the '(.*)' button (is|is not) visible in the header$/, (element, condition) => {
 	switch (element.toLowerCase()) {

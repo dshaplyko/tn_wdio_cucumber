@@ -1,7 +1,7 @@
 const {
 	When,
 } = require('cucumber');
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 
 
 When(/^I click '(.*)' button$/, (item) => {

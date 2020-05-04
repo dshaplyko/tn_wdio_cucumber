@@ -2,7 +2,7 @@ const {
 	When,
 	Then
 } = require('cucumber');
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 
 Then(/^the Side Menu is visible$/, () => {
 	return expect(pages.atBasePage().getSideMenu().isDisplayed()).to.equal(true);

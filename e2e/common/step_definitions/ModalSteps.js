@@ -2,7 +2,7 @@ const {
 	When,
 	Then
 } = require('cucumber');
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 
 When(/^I click OK button in modal$/, () => {
 	return pages.atBasePage().getModal().getOkButton().click();

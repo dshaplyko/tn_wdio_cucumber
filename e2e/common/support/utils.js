@@ -1,4 +1,4 @@
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 const testData = require('./data');
 
 const generateString = number => {

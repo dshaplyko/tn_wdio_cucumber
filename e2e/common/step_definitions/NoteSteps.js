@@ -2,7 +2,7 @@ const {
 	When,
 	Then
 } = require('cucumber');
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 
 Then(/^the '(.*)' element (is|is not) visible on the Note page$/, (item, condition) => {
 	switch (item.toLowerCase()) {

@@ -3,7 +3,7 @@ const {
 	When,
 	Then
 } = require('cucumber');
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 
 Given(/^I am on '(.*)' page$/, page => {
 	return pages.getPage(page).open();

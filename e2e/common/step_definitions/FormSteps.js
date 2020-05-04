@@ -2,7 +2,7 @@ const {
 	When,
 	Then
 } = require('cucumber');
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 
 Then(/^the '(.*)' (is|is not) visible on the (.*) page$/, (element, condition, page) => {
 	return expect(pages.getPage(page).getForm().getElement(element).isDisplayed()).to.equal(condition === 'is');

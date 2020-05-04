@@ -1,7 +1,7 @@
 const {
 	Then
 } = require('cucumber');
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 
 Then(/^the '(.*)' link (is|is not) visible in the footer$/, (element, condition) => {
 	return expect(pages.atBasePage().getFooter().getElement(element).isDisplayed()).to.equal(condition === 'is');

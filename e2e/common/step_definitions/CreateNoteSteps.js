@@ -3,7 +3,7 @@ const {
 	When,
 	Then
 } = require('cucumber');
-const pages = require('../../pageObjects/pages');
+const pages = require('../../po/pages');
 const utils = require('../support/utils');
 const testData = require('../support/data.json');
 
