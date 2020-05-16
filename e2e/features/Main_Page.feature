@@ -1,4 +1,4 @@
-@Wip
+@Run
 Feature: Main Feature
 As a user I want to be able to navigate and use the Main page
 
@@ -7,16 +7,16 @@ Scenario: 1. Verifying items on Main page as a visitor
    Then the list of notes should be displayed
    And the 'Filter' element is existing on the Main page
    And the 'Toggle' element is not existing on the Main page
-   And each of note entry has 'title'
-   And each of note entry has 'substitle'
+   And each of note entries has 'title'
+   And each of note entries has 'substitle'
 
 @Login
 Scenario: 1. Verifying items on Main page as a logged in user
    Given the list of notes should be displayed
    Then the 'Filter' element is existing on the Main page
    And the 'Toggle' element is existing on the Main page
-   And each of note entry has 'title'
-   And each of note entry has 'substitle'
+   And each of note entries has 'title'
+   And each of note entries has 'substitle'
 
 Scenario: 2. Opening a note item
    Given I am on 'main' page
@@ -33,13 +33,14 @@ Scenario: 3. Switching the only my notes toggle
 
 Scenario: 4. Verifying sorting options
    Given I am on 'main' page
-   Then the text of default filtering is 'Title'
+   #Then the text of default filtering is 'Title'
    When I expand filter dropdown
    Then the filter menu is visible
    And the 'Title' option is visible in the filter
    And the 'User' option is visible in the filter
    And the 'Date' option is visible in the filter
 
+@Wip
 Scenario: 5. Selecting a sorting by 'Title'
     Given I am on 'main' page
     When I expand filter dropdown

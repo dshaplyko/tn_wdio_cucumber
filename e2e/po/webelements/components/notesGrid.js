@@ -8,6 +8,7 @@ class NotesGrid extends PageComponent {
 	 * @returns {object}
 	 */
 	getNotes() {
+		this.rootEl.$('.note-grid-item:not(.add)').waitForDisplayed({timeout: 3000});
 		return this.rootEl.$$('.note-grid-item:not(.add)');
 	}
 
@@ -16,7 +17,7 @@ class NotesGrid extends PageComponent {
 	 * @returns {object}
 	 */
 	getNoteTitles() {
-		return this.rootEl.$('.note-grid-item .title');
+		return this.rootEl.$$('.note-grid-item .title');
 	}
 
 	/*
@@ -24,7 +25,7 @@ class NotesGrid extends PageComponent {
 	 * @returns {object}
 	 */
 	getNoteSubTitles() {
-		return this.rootEl.$('.note-grid-item .subtitle');
+		return this.rootEl.$$('.note-grid-item .subtitle');
 	}
 
 	/*
