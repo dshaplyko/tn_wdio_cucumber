@@ -22,5 +22,5 @@ When(/^I wait for ([0-9]) seconds$/, number => {
 });
 
 Then(/^'(.*)' page should be opened$/, page => {
-	return expect(pages.getPage(page).isPageOpened()).to.be.true;
+	return expect(pages.getPage(page).isPageOpened()).toEqual(true);
 });

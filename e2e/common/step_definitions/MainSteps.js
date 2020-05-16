@@ -5,15 +5,15 @@ const {
 const pages = require('../../po/pages');
 
 Then(/^the list of notes should be displayed$/, () => {
-	return expect(pages.atMainPage().getNotesGrid().isDisplayed()).to.equal(true);
+	return expect(pages.atMainPage().getNotesGrid().isDisplayed()).toEqual(true);
 });
 
 Then(/^the '(.*)' element (is|is not) existing on the Main page$/, (element, condition) => {
 	switch (element.toLowerCase()) {
 		case 'filter':
-			return expect(pages.atMainPage().getFilterDropdown().isExisting()).to.equal(condition === 'is');
+			return expect(pages.atMainPage().getFilterDropdown().isExisting()).toEqual(condition === 'is');
 		case 'toggle':
-			return expect(pages.atMainPage().getToggle().isExisting()).to.equal(condition === 'is');
+			return expect(pages.atMainPage().getToggle().isExisting()).toEqual(condition === 'is');
 	}
 });
 
@@ -23,15 +23,16 @@ Then(/^each of note entry has '(.*)'$/, item => {
 	let countNotes = pages.atMainPage().getNotesGrid().getNotes().value.length;
 	const valueToCompare = item.toLowerCase() === 'title' ? countTitles : countSubTitles;
 
-	return expect(countNotes).to.equal(valueToCompare);
+	return expect(countNotes).toEqual(valueToCompare);
 });
 
 When(/^I click on a random note item and store its title$/, () => {
-	let notes = pages.atMainPage().getNotesGrid().getNotes();
-	let randomValue = Math.floor(Math.random() * (notes.value.length - 1));
+	const notes = pages.atMainPage().getNotesGrid().getNotes();
+	const randomValue = Math.floor(Math.random() * (notes.length - 1));
 
 	global.stored_title = pages.atMainPage().getNotesGrid().getTitle(randomValue);
 	console.log('Title is: ' + global.stored_title);
+	//Issue is here!!!
 	return browser.elementIdClick(notes.value[randomValue].value.ELEMENT);
 });
 
@@ -55,16 +56,16 @@ When(/^I expand filter dropdown$/, () => {
 });
 
 Then(/^the filter menu (is|is not) visible$/, (condition) => {
-	return expect(pages.atMainPage().getFilter().isDisplayed()).to.equal(condition === 'is');
+	return expect(pages.atMainPage().getFilter().isDisplayed()).toEqual(condition === 'is');
 });
 
 Then(/^the text of default filtering is '(.*)'$/, (text) => {
-	return expect(pages.atMainPage().getFilterDropdown().getDefaultValue()).to.equal(text);
+	return expect(pages.atMainPage().getFilterDropdown().getText()).toEqual(text);
 
 });
 
 Then(/^the '(.*)' option (is|is not) visible in the filter$/, (element, condition) => {
-	return expect(pages.atMainPage().getFilter().getElement(element).isDisplayed()).to.equal(condition === 'is');
+	return expect(pages.atMainPage().getFilter().getElement(element).isDisplayed()).toEqual(condition === 'is');
 
 });
 
@@ -81,5 +82,5 @@ Then(/^the notes are sorted by 'Title'$/, () => {
 	}
 
 	const sorted = noteTitles.slice().sort();
-	return expect(noteTitles.join(',')).to.equal(sorted.join(','));
+	return expect(noteTitles.join(',')).toEqual(sorted.join(','));
 });

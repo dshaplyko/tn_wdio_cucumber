@@ -1,15 +1,16 @@
 const PageComponent = require('../PageComponent');
+const PageElement = require('../PageElement');
 
 class Filter extends PageComponent {
 
 	getElement(elem) {
 		switch (elem.toLowerCase()) {
 			case 'title':
-				return this.rootEl.$('#orderByTitle');
+				return new PageElement(this.rootEl.$('#orderByTitle'));
 			case 'user':
-				return this.rootEl.$('#orderByUsername');
+				return new PageElement(this.rootEl.$('#orderByUsername'));
 			case 'date':
-				return this.rootEl.$('#orderByDate');
+				return new PageElement(this.rootEl.$('#orderByDate'));
 		}
 	}
 }

@@ -10,9 +10,9 @@ const testData = require('../support/data.json');
 Then(/^the '(.*)' button should be (inactive|active)$/, (button, condition) => {
 
 	if (condition === 'inactive') {
-		return expect(pages.atCreateNotePage().getButton(button).isButtonActive()).to.equal('-1');
+		return expect(pages.atCreateNotePage().getButton(button).isButtonActive()).toEqual('-1');
 	}
-	return expect(pages.atCreateNotePage().getButton(button).isButtonActive()).to.equal('0');
+	return expect(pages.atCreateNotePage().getButton(button).isButtonActive()).toEqual('0');
 });
 
 When(/^I type '(.*)' into the '(.*)' field$/, (text, field) => {
@@ -30,7 +30,7 @@ When(/^I click '(.*)' button to continue$/, (button) => {
 
 When(/^I upload a photo$/, () => {
 	const filePath = path.join(__dirname, testData.testImage);
-	return pages.atCreateNotePage().getDropZone().setValue(filePath);
+	return pages.atCreateNotePage().getDropZone().uploadPhoto(filePath);
 });
 
 When(/^I click on the map$/, () => {

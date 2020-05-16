@@ -1,6 +1,5 @@
 const Page = require('./page');
 const PageElement = require('../webelements/PageElement');
-const DropZone = require('../webelements/components/dropZone');
 
 class CreateNotePage extends Page {
 
@@ -48,7 +47,7 @@ class CreateNotePage extends Page {
 	 */
 	getDropZone() {
 		browser.$('.drop-zone').waitForDisplayed({timeout: GLOBAL_TIMEOUT});
-		return new DropZone(browser.$('.drop-zone input'));
+		return new PageElement(browser.$('.drop-zone input'));
 	}
 
 }

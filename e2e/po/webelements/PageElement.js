@@ -63,6 +63,19 @@ class PageElement {
     } catch (e) {
       console.log(e);
     }
+  }
+  
+  uploadPhoto(value) {
+    try {
+      browser.execute(
+        el => el.style.display = 'block',
+        this.rootEl
+      );
+      this.rootEl.waitForDisplayed();
+      return this.rootEl.setValue(value);
+    } catch(e) {
+      console.log(e);
+    }
 	}
 }
 module.exports = PageElement;

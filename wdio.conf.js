@@ -142,9 +142,9 @@ exports.config = {
 	 * @param {Array.<Object>} capabilities list of capabilities details
 	 * @param {Array.<String>} specs List of spec file paths that are to be run
 	 */
-	before: function () {
-		expect = require('chai').expect;
-	}
+	// before: function () {
+	// 	expect = require('chai').expect;
+	// }
 	/**
 	 * Runs before a WebdriverIO command gets executed.
 	 * @param {String} commandName hook command name

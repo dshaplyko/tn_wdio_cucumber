@@ -1,7 +1,6 @@
 const Page = require('./page');
 const NotesGrid = require('../webelements/components/notesGrid');
 const PageElement = require('../webelements/PageElement');
-const Dropdown = require('../webelements/components/dropdown');
 const Filter = require('../webelements/components/filter');
 
 class MainPage extends Page {
@@ -50,7 +49,7 @@ class MainPage extends Page {
 	 */
 	getFilterDropdown() {
 		browser.$('.filter-item').waitForExist({timeout: GLOBAL_TIMEOUT});
-		return new Dropdown(browser.$('.filter-item'));
+		return new PageElement(browser.$('.filter-item'));
 	}
 }
 

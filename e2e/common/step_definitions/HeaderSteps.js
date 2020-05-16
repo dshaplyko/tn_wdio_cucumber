@@ -7,14 +7,14 @@ const pages = require('../../po/pages');
 Then(/^the '(.*)' button (is|is not) visible in the header$/, (element, condition) => {
 	switch (element.toLowerCase()) {
 		case 'login':
-			return expect(pages.atBasePage().getHeader().getLoginButton().isDisplayed()).to.equal(condition === 'is');
+			return expect(pages.atBasePage().getHeader().getLoginButton().isDisplayed()).toEqual(condition === 'is');
 		case 'sign up':
-			return expect(pages.atBasePage().getHeader().getSignUp().isDisplayed()).to.equal(condition === 'is');
+			return expect(pages.atBasePage().getHeader().getSignUp().isDisplayed()).toEqual(condition === 'is');
 	}
 });
 
 Then(/^the Logo is visible in the header$/, () => {
-	return expect(pages.atBasePage().getHeader().getLogo().isDisplayed()).to.equal(true);
+	return expect(pages.atBasePage().getHeader().getLogo().isDisplayed()).toEqual(true);
 });
 
 When(/^I click on the Logo$/, () => {

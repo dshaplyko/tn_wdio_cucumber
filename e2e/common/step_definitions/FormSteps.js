@@ -5,7 +5,7 @@ const {
 const pages = require('../../po/pages');
 
 Then(/^the '(.*)' (is|is not) visible on the (.*) page$/, (element, condition, page) => {
-	return expect(pages.getPage(page).getForm().getElement(element).isDisplayed()).to.equal(condition === 'is');
+	return expect(pages.getPage(page).getForm().getElement(element).isDisplayed()).toEqual(condition === 'is');
 });
 
 When(/^I click (.*) on the (.*) page$/, (element, page) => {
@@ -17,15 +17,15 @@ When(/^I enter "(.*)" in (.*) on the (.*) page$/, (value, field, page) => {
 });
 
 Then(/^Text of welcome message on the (.*) page should be "([^"]+)"$/, (page, text) => {
-	return expect(pages.getPage(page).getWelcomeText()).to.equal(text);
+	return expect(pages.getPage(page).getWelcomeText()).toEqual(text);
 });
 
 Then(/^the '(.*)' becomes (inactive|active) on the (.*) page$/, (button, condition, page) => {
 
 	if (condition === 'inactive') {
-		return expect(pages.getPage(page).getForm().getElement(button).isButtonActive()).to.equal('-1');
+		return expect(pages.getPage(page).getForm().getElement(button).isButtonActive()).toEqual('-1');
 	}
-	return expect(pages.getPage(page).getForm().getElement(button).isButtonActive()).to.equal('0');
+	return expect(pages.getPage(page).getForm().getElement(button).isButtonActive()).toEqual('0');
 });
 
 When(/^I clear (.*) on the (.*) page$/, (field, page) => {

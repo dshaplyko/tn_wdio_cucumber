@@ -8,7 +8,7 @@ class NotesGrid extends PageComponent {
 	 * @returns {object}
 	 */
 	getNotes() {
-		return this.rootEl.$('.note-grid-item:not(.add)');
+		return this.rootEl.$$('.note-grid-item:not(.add)');
 	}
 
 	/*
