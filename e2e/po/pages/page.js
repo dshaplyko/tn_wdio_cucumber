@@ -9,10 +9,6 @@ class Page {
 	}
 
 	open(path) {
-		/*
-		Dirty hack. Need to re-write it
-		*/
-		//browser.reloadSession();
 		browser.url('/#' + path);
 	}
 
@@ -46,7 +42,9 @@ class Page {
 	 * @returns {SideMenu}
 	 */
 	getSideMenu() {
-		browser.$('//span[@id="newsMenuItem"]/../../..').waitForExist({timeout: GLOBAL_TIMEOUT});
+		browser.$('//span[@id="newsMenuItem"]/../../..').waitForExist({
+			timeout: GLOBAL_TIMEOUT
+		});
 		return new SideMenu(browser.$('//span[@id="newsMenuItem"]/../../..'));
 	}
 }
